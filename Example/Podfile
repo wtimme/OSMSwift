@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'OSMSwift_Example' do
+  pod 'OSMSwift', :path => '../'
+
+  target 'OSMSwift_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
