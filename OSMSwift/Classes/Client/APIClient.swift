@@ -31,6 +31,8 @@ public protocol APIClientProtocol {
     
     var isAuthenticated: Bool { get }
     
+    func logout()
+    
     func addAccountUsingOAuth(from presentingViewController: UIViewController,
                               _ completion: @escaping (Error?) -> Void)
     
@@ -79,6 +81,10 @@ public class APIClient: APIClientProtocol {
     
     public var isAuthenticated: Bool {
         return nil != keychainHandler.oauthCredentials
+    }
+    
+    public func logout() {
+        keychainHandler.setCredentials(nil)
     }
     
     public func addAccountUsingOAuth(from presentingViewController: UIViewController,

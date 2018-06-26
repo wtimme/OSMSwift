@@ -84,6 +84,15 @@ class APIClientTestCase: XCTestCase {
                        "The client should store the credentials in the Keychain.")
     }
     
+    func testLogoutShouldRemoveOAuthCredentialsFromKeychain() {
+        keychainHandlerMock.mockedOAuthCredentials = OAuthCredentials(token: "sample-token",
+                                                                      secret: "sample-secret")
+        
+        client.logout()
+        
+        XCTAssertNil(keychainHandlerMock.mockedOAuthCredentials)
+    }
+    
     // MARK: Permissions
     
     func testPermissionsShouldResultInNotAuthorizedErrorWhenThereWereNoOAuthCredentials() {
