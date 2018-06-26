@@ -1,0 +1,43 @@
+//
+//  OAuthSwiftOAuthHandler.swift
+//  OSMSwift
+//
+//  Created by Wolfgang Timme on 6/26/18.
+//
+
+import OAuthSwift
+
+public class OAuthSwiftOAuthHandler: OAuthHandling {
+    
+    public init(baseURL: URL,
+                consumerKey: String,
+                consumerSecret: String) {
+        oauthSwift = OAuth1Swift(consumerKey: consumerKey,
+                                 consumerSecret: consumerSecret,
+                                 requestTokenUrl: baseURL.appendingPathComponent("oauth/request_token").absoluteString,
+                                 authorizeUrl: baseURL.appendingPathComponent("oauth/authorize").absoluteString,
+                                 accessTokenUrl: baseURL.appendingPathComponent("oauth/access_token").absoluteString)
+    }
+    
+    // MARK: Private
+    
+    private let oauthSwift: OAuth1Swift
+    
+    // MARK: OAuthHandling
+    
+    public func startOAuthFlow(from viewController: UIViewController, _ completion: @escaping (OAuthCredentials?, Error?) -> Void) {
+        // Use an in-app Safari web view controller instead of redirecting to an external app.
+        oauthSwift.authorizeURLHandler = SafariURLHandler(viewController: viewController,
+                                                          oauthSwift: oauthSwift)
+        
+        _ = oauthSwift.authorize(withCallbackURL: "osm-completionist://oauth-callback/osm", success: { (credentials, _, _) in
+            let oauthCredentials = OAuthCredentials(token: credentials.oauthToken,
+                                                    secret: credentials.oauthTokenSecret)
+            
+            completion(oauthCredentials, nil)
+        }, failure: { (error) in
+            completion(nil, error)
+        })
+    }
+
+}
