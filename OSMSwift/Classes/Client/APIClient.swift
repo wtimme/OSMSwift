@@ -15,18 +15,6 @@ enum Endpoint: String {
     case getPermissions = "/api/0.6/permissions"
 }
 
-public enum Permission: String {
-    public typealias RawValue = String
-    
-    case allow_read_prefs // Read user preferences
-    case allow_write_prefs // Modify user preferences
-    case allow_write_diary // Create diary entries, comments and make friends
-    case allow_write_api // Modify the map
-    case allow_read_gpx // Read private GPS traces
-    case allow_write_gpx // Upload GPS traces
-    case allow_write_notes // Modify notes
-}
-
 public protocol APIClientProtocol {
     
     var isAuthenticated: Bool { get }
@@ -117,6 +105,14 @@ public class APIClient: APIClientProtocol {
                 completion([], response.error)
                 return
             }
+            
+            guard let responseData = response.data else {
+                completion([], nil)
+                return
+            }
+            
+            completion(Permission.parseListOfPermissions(from: responseData),
+                       nil)
         }
     }
     

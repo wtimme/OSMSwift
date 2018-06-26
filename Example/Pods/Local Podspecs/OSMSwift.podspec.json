@@ -16,7 +16,7 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "9.0"
+    "ios": "9.3"
   },
   "source_files": "OSMSwift/Classes/**/*",
   "dependencies": {
@@ -28,6 +28,9 @@
     ],
     "KeychainAccess": [
       "~> 3.1.0"
+    ],
+    "AEXML": [
+      "~> 4.2.2"
     ]
   }
 }

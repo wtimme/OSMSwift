@@ -128,4 +128,39 @@ class APIClientTestCase: XCTestCase {
         wait(for: [closureExpectation], timeout: 0.5)
     }
     
+    func testPermissionsShouldParseAListOfPermissions() {
+        // Mock credentials so that we're authenticated.
+        keychainHandlerMock.mockedOAuthCredentials = OAuthCredentials(token: "sample-token",
+                                                                      secret: "sample-secret")
+        
+        guard let xmlData = dataFromXMLFile(named: "Permissions") else {
+            XCTFail("Failed to read test XML data.")
+            return
+        }
+        
+        httpRequestHandlerMock.dataResponse = DataResponse(data: xmlData, error: nil)
+        
+        let closureExpectation = expectation(description: "The closure should be executed.")
+        client.permissions { (permissions, error) in
+            XCTAssertEqual(permissions.count, 3)
+            XCTAssertTrue(permissions.contains(.allow_read_prefs))
+            XCTAssertTrue(permissions.contains(.allow_read_gpx))
+            XCTAssertTrue(permissions.contains(.allow_write_gpx))
+            
+            XCTAssertNil(error)
+            
+            closureExpectation.fulfill()
+        }
+        wait(for: [closureExpectation], timeout: 0.5)
+    }
+    
+    // MARK: Helper
+    
+    private func dataFromXMLFile(named fileName: String) -> Data? {
+        let bundle = Bundle(for: type(of: self))
+        guard let url = bundle.url(forResource: fileName, withExtension: "xml") else { return nil }
+        
+        return try? Data(contentsOf: url)
+    }
+    
 }
