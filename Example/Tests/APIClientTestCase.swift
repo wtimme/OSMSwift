@@ -95,6 +95,17 @@ class APIClientTestCase: XCTestCase {
     
     // MARK: Permissions
     
+    func testPermissionsShouldQueryTheCorrectURLResource() {
+        
+        // Mock credentials so that we're authenticated.
+        keychainHandlerMock.mockedOAuthCredentials = OAuthCredentials(token: "sample-token",
+                                                                      secret: "sample-secret")
+        
+        client.permissions { _, _ in }
+        
+        XCTAssertEqual(httpRequestHandlerMock.path, "/api/0.6/permissions")
+    }
+    
     func testPermissionsShouldResultInNotAuthorizedErrorWhenThereWereNoOAuthCredentials() {
         let closureExpectation = expectation(description: "The closure should be executed.")
         client.permissions { (permissions, error) in
