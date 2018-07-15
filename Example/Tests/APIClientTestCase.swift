@@ -165,6 +165,20 @@ class APIClientTestCase: XCTestCase {
         wait(for: [closureExpectation], timeout: 0.5)
     }
     
+    // MARK: Map Data
+    
+    func testMapDataShouldQueryTheCorrectURLResource() {
+        
+        let box = BoundingBox(left: 13.386310,
+                              bottom: 52.524905,
+                              right: 13.407789,
+                              top: 52.530061)
+        
+        client.mapData(inside: box) { _, _ in }
+        
+        XCTAssertEqual(httpRequestHandlerMock.path, "/api/0.6/map?bbox=\(box.queryString)")
+    }
+    
     // MARK: Helper
     
     private func dataFromXMLFile(named fileName: String) -> Data? {

@@ -15,6 +15,25 @@ enum Endpoint: String {
     case getPermissions = "/api/0.6/permissions"
 }
 
+public struct BoundingBox {
+    let left: Double // The longitude of the left (westernmost) side of the bounding box
+    let bottom: Double // The latitude of the bottom (southernmost) side of the bounding box
+    let right: Double // The longitude of the right (easternmost) side of the bounding box
+    let top: Double // The latitude of the top (northernmost) side of the bounding box
+    
+    public init(left: Double, bottom: Double, right: Double, top: Double) {
+        self.left = left
+        self.bottom = bottom
+        self.right = right
+        self.top = top
+    }
+    
+    /// The String representation of the bounding box when using it as an URL parameter.
+    public var queryString: String {
+        return "\(left),\(bottom),\(right),\(top)"
+    }
+}
+
 public protocol APIClientProtocol {
     
     var isAuthenticated: Bool { get }
@@ -28,6 +47,13 @@ public protocol APIClientProtocol {
     ///
     /// - Parameter completion: Closure that is executed once the permissions were determined or an error occured.
     func permissions(_ completion: @escaping ([Permission], Error?) -> Void)
+    
+    /// Attempts to download the map data inside the given bounding box.
+    ///
+    /// - Parameters:
+    ///   - boundingBox: The bounding box that confines the map data.
+    ///   - completion: Closure that is executed once the map data was downloaded completely or an error occured.
+    func mapData(inside boundingBox: BoundingBox, _ completion: @escaping ([Any], Error?) -> Void)
     
 }
 
@@ -117,6 +143,24 @@ public class APIClient: APIClientProtocol {
             
             completion(Permission.parseListOfPermissions(from: responseData),
                        nil)
+        }
+    }
+    
+    public func mapData(inside boundingBox: BoundingBox, _ completion: @escaping ([Any], Error?) -> Void) {
+        let path = "/api/0.6/map?bbox=\(boundingBox.queryString)"
+        
+        httpRequestHandler.request(baseURL, path: path) { (response) in
+            guard response.error == nil else {
+                completion([], response.error)
+                return
+            }
+            
+            guard let responseData = response.data else {
+                completion([], nil)
+                return
+            }
+            
+            completion([], nil)
         }
     }
     
