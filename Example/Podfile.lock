@@ -3,11 +3,15 @@ PODS:
   - Alamofire (4.7.2)
   - KeychainAccess (3.1.1)
   - OAuthSwift (1.2.0)
+  - OAuthSwiftAlamofire (0.2.0):
+    - Alamofire
+    - OAuthSwift
   - OSMSwift (0.1.0):
     - AEXML (~> 4.2.2)
     - Alamofire (~> 4.7.0)
     - KeychainAccess (~> 3.1.0)
     - OAuthSwift (~> 1.2.0)
+    - OAuthSwiftAlamofire (~> 0.2.0)
 
 DEPENDENCIES:
   - OSMSwift (from `../`)
@@ -18,6 +22,7 @@ SPEC REPOS:
     - Alamofire
     - KeychainAccess
     - OAuthSwift
+    - OAuthSwiftAlamofire
 
 EXTERNAL SOURCES:
   OSMSwift:
@@ -28,7 +33,8 @@ SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   KeychainAccess: 7bd430028059754a3debab3cfc0bd1fc7fb85df3
   OAuthSwift: 7fd6855b8e4d58eb5a30d156ea9bed7a8aecd1ca
-  OSMSwift: 7cf027ace7da791e2c9c3fe2f44f337c14451377
+  OAuthSwiftAlamofire: e51f11ff579dd4293bfe2a1a24c658caad4dac35
+  OSMSwift: d014459151de1590fd4c6240094b65e5221ce159
 
 PODFILE CHECKSUM: 53e47b48dba31eb5e93fb7a30af05bfab225ec08
 

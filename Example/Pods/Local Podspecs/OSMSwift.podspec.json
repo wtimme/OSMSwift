@@ -31,6 +31,9 @@
     ],
     "AEXML": [
       "~> 4.2.2"
+    ],
+    "OAuthSwiftAlamofire": [
+      "~> 0.2.0"
     ]
   }
 }
