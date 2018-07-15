@@ -6,6 +6,8 @@
 //
 
 import OAuthSwift
+import Alamofire
+import OAuthSwiftAlamofire
 
 public class OAuthSwiftOAuthHandler: OAuthHandling {
     
@@ -17,11 +19,17 @@ public class OAuthSwiftOAuthHandler: OAuthHandling {
                                  requestTokenUrl: baseURL.appendingPathComponent("oauth/request_token").absoluteString,
                                  authorizeUrl: baseURL.appendingPathComponent("oauth/authorize").absoluteString,
                                  accessTokenUrl: baseURL.appendingPathComponent("oauth/access_token").absoluteString)
+        
+        configureAlamofireToSignRequests(using: oauthSwift)
     }
     
     // MARK: Private
     
     private let oauthSwift: OAuth1Swift
+    
+    private func configureAlamofireToSignRequests(using oauthSwit: OAuthSwift) {
+        SessionManager.default.adapter = oauthSwift.requestAdapter
+    }
     
     // MARK: OAuthHandling
     
