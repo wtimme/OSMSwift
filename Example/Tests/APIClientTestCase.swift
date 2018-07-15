@@ -176,6 +176,25 @@ class APIClientTestCase: XCTestCase {
         XCTAssertEqual(httpRequestHandlerMock.path, "/api/0.6/map?bbox=\(box.queryString)")
     }
     
+    func testMapDataShouldCallTheClosureIfThereWasAnErrorDuringTheHTTPRequest() {
+        
+        let box = BoundingBox(left: 13.386310, bottom: 52.524905, right: 13.407789, top: 52.530061)
+        
+        // Act as if the HTTP request handler experienced an error.
+        let mockedError = MockError(code: 1)
+        httpRequestHandlerMock.dataResponse = DataResponse(data: nil, error: mockedError)
+        
+        let closureExpectation = expectation(description: "The closure should be executed.")
+        client.mapData(inside: box) { (elements, error) in
+            XCTAssertTrue(elements.isEmpty)
+            XCTAssertEqual(error as? MockError, mockedError)
+            
+            closureExpectation.fulfill()
+        }
+        
+        wait(for: [closureExpectation], timeout: 0.5)
+    }
+    
     // MARK: Helper
     
     private func dataFromXMLFile(named fileName: String) -> Data? {
