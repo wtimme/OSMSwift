@@ -25,6 +25,14 @@ public class OAuthSwiftOAuthHandler: OAuthHandling {
     
     // MARK: OAuthHandling
     
+    public func setupClientCredentials(_ credentials: OAuthCredentials) {
+        oauthSwift.client = OAuthSwiftClient(consumerKey: oauthSwift.client.credential.consumerKey,
+                                             consumerSecret: oauthSwift.client.credential.consumerSecret,
+                                             oauthToken: credentials.token,
+                                             oauthTokenSecret: credentials.secret,
+                                             version: .oauth1)
+    }
+    
     public func startOAuthFlow(from viewController: UIViewController, _ completion: @escaping (OAuthCredentials?, Error?) -> Void) {
         // Use an in-app Safari web view controller instead of redirecting to an external app.
         oauthSwift.authorizeURLHandler = SafariURLHandler(viewController: viewController,

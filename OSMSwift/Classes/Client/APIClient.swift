@@ -63,6 +63,10 @@ public class APIClient: APIClientProtocol {
         self.keychainHandler = keychainHandler
         self.oauthHandler = oauthHandler
         self.httpRequestHandler = httpRequestHandler
+        
+        if let credentials = keychainHandler.oauthCredentials {
+            oauthHandler.setupClientCredentials(credentials)
+        }
     }
     
     // MARK: APIClientProtocol
