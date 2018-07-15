@@ -17,7 +17,13 @@ public class AlamofireHTTPRequestHandler: NSObject, HTTPRequestHandling {
                  _ path: String,
                  _ parameters: [String : Any]?,
                  _ completion: @escaping (DataResponse) -> Void) {
-        Alamofire.request(baseURL).response { response in
+        
+        guard let resourceURL = URL(string: path, relativeTo: baseURL) else {
+            assertionFailure("Unable to construct the resource URL.")
+            return
+        }
+        
+        Alamofire.request(resourceURL).response { response in
             completion(DataResponse(data: response.data,
                                     error: response.error))
         }
