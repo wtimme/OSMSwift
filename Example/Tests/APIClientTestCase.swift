@@ -169,10 +169,7 @@ class APIClientTestCase: XCTestCase {
     
     func testMapDataShouldQueryTheCorrectURLResource() {
         
-        let box = BoundingBox(left: 13.386310,
-                              bottom: 52.524905,
-                              right: 13.407789,
-                              top: 52.530061)
+        let box = BoundingBox(left: 13.386310, bottom: 52.524905, right: 13.407789, top: 52.530061)
         
         client.mapData(inside: box) { _, _ in }
         
