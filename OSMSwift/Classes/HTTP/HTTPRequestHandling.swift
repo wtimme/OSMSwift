@@ -10,7 +10,7 @@ import Foundation
 public struct DataResponse {
     let data: Data?
     let error: Error?
-    
+
     public init(data: Data? = nil, error: Error? = nil) {
         self.data = data
         self.error = error
@@ -18,12 +18,12 @@ public struct DataResponse {
 }
 
 public protocol HTTPRequestHandling {
-    
+
     func request(_ baseURL: URL,
                  _ path: String,
                  _ parameters: [String: Any]?,
                  _ completion: @escaping (DataResponse) -> Void)
-    
+
 }
 
 extension HTTPRequestHandling {

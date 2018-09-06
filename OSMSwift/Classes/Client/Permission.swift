@@ -9,7 +9,7 @@ import Foundation
 
 public enum Permission: String {
     public typealias RawValue = String
-    
+
     case allow_read_prefs // Read user preferences
     case allow_write_prefs // Modify user preferences
     case allow_write_diary // Create diary entries, comments and make friends

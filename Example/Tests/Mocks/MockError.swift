@@ -9,20 +9,20 @@
 import Foundation
 
 class MockError: LocalizedError, Equatable {
-    
+
     init(code: Int) {
         self.code = code
     }
-    
+
     // MARK: LocalizedError
-    
+
     let code: Int
     let title = "Sample error"
-    
+
     // MARK: Equatable
-    
+
     static func == (lhs: MockError, rhs: MockError) -> Bool {
         return lhs.code == rhs.code
     }
-    
+
 }

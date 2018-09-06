@@ -9,15 +9,15 @@
 @testable import OSMSwift
 
 class KeychainHandlerMock: KeychainHandling {
-    
+
     var mockedOAuthCredentials: OAuthCredentials?
-    
+
     // MARK: KeychainHandling
-    
+
     func setCredentials(_ credentials: OAuthCredentials?) {
         mockedOAuthCredentials = credentials
     }
-    
+
     var oauthCredentials: OAuthCredentials? {
         return mockedOAuthCredentials
     }

@@ -11,7 +11,7 @@ import UIKit
 public struct OAuthCredentials: Equatable {
     let token: String
     let secret: String
-    
+
     public init(token: String, secret: String) {
         self.token = token
         self.secret = secret
@@ -19,9 +19,9 @@ public struct OAuthCredentials: Equatable {
 }
 
 public protocol OAuthHandling {
-    
+
     func setupClientCredentials(_ credentials: OAuthCredentials)
-    
+
     /// Starts the OAuth flow for obtaining `OAuthCredentials`.
     ///
     /// - Parameters:
