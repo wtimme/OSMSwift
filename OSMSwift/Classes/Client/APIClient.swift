@@ -7,6 +7,8 @@
 
 import Foundation
 
+import SwiftOverpass
+
 public enum APIClientError: Error {
     case notAuthenticated
 }
@@ -34,8 +36,7 @@ public protocol APIClientProtocol {
     /// - Parameters:
     ///   - boundingBox: The bounding box that confines the map data.
     ///   - completion: Closure that is executed once the map data was downloaded completely or an error occured.
-    func mapData(inside boundingBox: BoundingBox, _ completion: @escaping ([Any], Error?) -> Void)
-    
+    func mapData(inside boundingBox: BoundingBox, _ completion: @escaping ([OverpassElement], Error?) -> Void)
 }
 
 public class APIClient: APIClientProtocol {
@@ -127,7 +128,7 @@ public class APIClient: APIClientProtocol {
         }
     }
     
-    public func mapData(inside boundingBox: BoundingBox, _ completion: @escaping ([Any], Error?) -> Void) {
+    public func mapData(inside boundingBox: BoundingBox, _ completion: @escaping ([OverpassElement], Error?) -> Void) {
         let path = "/api/0.6/map?bbox=\(boundingBox.queryString)"
         
         httpRequestHandler.request(baseURL, path: path) { (response) in
