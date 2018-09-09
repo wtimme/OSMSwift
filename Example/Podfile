@@ -17,6 +17,7 @@ abstract_target 'OSMSwiftCombined' do
     
     target 'OSMSwift_Tests' do
         #inherit! :search_paths
+        pod 'Require'
     end
     
 end
