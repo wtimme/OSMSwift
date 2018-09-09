@@ -33,6 +33,11 @@ public protocol APIClientProtocol {
     ///   - completion: Closure that is executed once the account was added or an error occurred.
     func addAccountUsingOAuth(from presentingViewController: UIViewController,
                               _ completion: @escaping (Error?) -> Void)
+    
+    /// Attempts to get details on the authenticated user.
+    ///
+    /// - Parameter completion: Closure that is executed once the user details were determined or an error occured.
+    func authenticatedUser(_ completion: @escaping (User?, Error?) -> Void)
 
     /// Request the list with permissions from the server.
     ///
@@ -112,6 +117,19 @@ public class APIClient: APIClientProtocol {
             self?.keychainHandler.setCredentials(credentials)
 
             completion(nil)
+        }
+    }
+    
+    public func authenticatedUser(_ completion: @escaping (User?, Error?) -> Void) {
+        let path = "/api/0.6/user/details"
+        
+        httpRequestHandler.request(baseURL, path: path) { (response) in
+            guard let data = response.data, response.error == nil else {
+                completion(nil, response.error)
+                return
+            }
+            
+            completion(User(data: data), nil)
         }
     }
 

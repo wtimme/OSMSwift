@@ -194,6 +194,61 @@ class APIClientTestCase: XCTestCase {
 
         wait(for: [closureExpectation], timeout: 0.5)
     }
+    
+    // MARK: Authenticated User
+    
+    func testAuthenticatedUserShouldQueryTheCorrectURL() {
+        
+        client.authenticatedUser { _, _ in }
+        
+        XCTAssertEqual(httpRequestHandlerMock.path, "/api/0.6/user/details")
+    }
+    
+    func testAuthenticatedUserShouldCallTheClosureIfThereWasAnErrorDuringTheHTTPRequest() {
+        
+        // Act as if the HTTP request handler experienced an error.
+        let mockedError = MockError(code: 1)
+        httpRequestHandlerMock.dataResponse = DataResponse(data: nil, error: mockedError)
+        
+        let closureExpectation = expectation(description: "The closure should be executed.")
+        client.authenticatedUser { user, error in
+            XCTAssertNil(user)
+            XCTAssertEqual(error as? MockError, mockedError)
+            
+            closureExpectation.fulfill()
+        }
+        
+        wait(for: [closureExpectation], timeout: 0.5)
+    }
+    
+    func testAuthenticatedUserShouldShouldParseASuccessfulResponseIntoAUser() {
+        // Mock credentials so that we're authenticated.
+        keychainHandlerMock.mockedOAuthCredentials = OAuthCredentials(token: "sample-token",
+                                                                      secret: "sample-secret")
+        
+        guard let xmlData = dataFromXMLFile(named: "AuthenticatedUser") else {
+            XCTFail("Failed to read test XML data.")
+            return
+        }
+        
+        httpRequestHandlerMock.dataResponse = DataResponse(data: xmlData, error: nil)
+        
+        let closureExpectation = expectation(description: "The closure should be executed.")
+        client.authenticatedUser { user, error in
+            guard let user = user else {
+                XCTFail("The XML should've been properly parsed.")
+                return
+            }
+            
+            XCTAssertEqual(user.id, 42)
+            XCTAssertEqual(user.displayName, "john.doe")
+            
+            XCTAssertNil(error)
+            
+            closureExpectation.fulfill()
+        }
+        wait(for: [closureExpectation], timeout: 0.5)
+    }
 
     // MARK: Helper
 
