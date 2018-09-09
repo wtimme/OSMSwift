@@ -12,6 +12,7 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		648946742145BCB800BA12D7 /* AuthenticatedUser.xml in Resources */ = {isa = PBXBuildFile; fileRef = 648946722145BC8D00BA12D7 /* AuthenticatedUser.xml */; };
 		64AB8F3B20E194EA00E6BF4D /* APIClientTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AB8F3A20E194EA00E6BF4D /* APIClientTestCase.swift */; };
 		64AB8F4120E1966400E6BF4D /* OAuthHandlerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AB8F4020E1966400E6BF4D /* OAuthHandlerMock.swift */; };
 		64AB8F4520E19CD300E6BF4D /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AB8F4420E19CD300E6BF4D /* MockError.swift */; };
@@ -47,6 +48,7 @@
 		607FACE51AFB9204008FA782 /* OSMSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSMSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6306F8A844BE92BFC5EC3930 /* Pods_OSMSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OSMSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		648946722145BC8D00BA12D7 /* AuthenticatedUser.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = AuthenticatedUser.xml; path = XML/User/AuthenticatedUser.xml; sourceTree = "<group>"; };
 		64AB8F3A20E194EA00E6BF4D /* APIClientTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTestCase.swift; sourceTree = "<group>"; };
 		64AB8F4020E1966400E6BF4D /* OAuthHandlerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OAuthHandlerMock.swift; path = Mocks/OAuthHandlerMock.swift; sourceTree = "<group>"; };
 		64AB8F4420E19CD300E6BF4D /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockError.swift; path = Mocks/MockError.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				64B9F8EA20E2E266003A3270 /* Permissions.xml */,
+				648946722145BC8D00BA12D7 /* AuthenticatedUser.xml */,
 			);
 			name = XML;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				648946742145BCB800BA12D7 /* AuthenticatedUser.xml in Resources */,
 				64B9F8EC20E2E270003A3270 /* Permissions.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

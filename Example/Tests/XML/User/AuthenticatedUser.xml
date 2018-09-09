@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="OpenStreetMap server">
+    <user id="42" display_name="john.doe" account_created="2011-04-17T15:00:38Z">
+        <description></description>
+        <contributor-terms agreed="true" pd="false"/>
+        <roles></roles>
+        <changesets count="1"/>
+        <traces count="0"/>
+        <blocks>
+            <received count="0" active="0"/>
+        </blocks>
+        <languages>
+            <lang>en-US</lang>
+            <lang>en</lang>
+        </languages>
+        <messages>
+            <received count="0" unread="0"/>
+            <sent count="0"/>
+        </messages>
+    </user>
+</osm>
