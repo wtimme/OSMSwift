@@ -1,8 +1,8 @@
 PODS:
   - AEXML (4.2.2)
-  - Alamofire (4.7.2)
+  - Alamofire (4.7.3)
   - KeychainAccess (3.1.1)
-  - OAuthSwift (1.2.0)
+  - OAuthSwift (1.2.2)
   - OAuthSwiftAlamofire (0.2.0):
     - Alamofire
     - OAuthSwift
@@ -12,13 +12,14 @@ PODS:
     - KeychainAccess (~> 3.1.0)
     - OAuthSwift (~> 1.2.0)
     - OAuthSwiftAlamofire (~> 0.2.0)
-    - SwiftOverpass
-  - SwiftOverpass (1.0.3):
+    - SwiftOverpass (~> 2.0.0)
+  - SwiftOverpass (2.0.0):
     - AEXML (~> 4.2.2)
     - Alamofire (~> 4.5)
 
 DEPENDENCIES:
   - OSMSwift (from `../`)
+  - SwiftOverpass (from `https://github.com/holyturt/SwiftOverpassWrapper.git`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -27,21 +28,27 @@ SPEC REPOS:
     - KeychainAccess
     - OAuthSwift
     - OAuthSwiftAlamofire
-    - SwiftOverpass
 
 EXTERNAL SOURCES:
   OSMSwift:
     :path: "../"
+  SwiftOverpass:
+    :git: https://github.com/holyturt/SwiftOverpassWrapper.git
+
+CHECKOUT OPTIONS:
+  SwiftOverpass:
+    :commit: 60565dbaca9c542004ad016bc9a3c7e6ae2f7d19
+    :git: https://github.com/holyturt/SwiftOverpassWrapper.git
 
 SPEC CHECKSUMS:
   AEXML: 5ebafc1b75e0bcf0f1b09b8ca8fed2d5a199479b
-  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   KeychainAccess: 7bd430028059754a3debab3cfc0bd1fc7fb85df3
-  OAuthSwift: 7fd6855b8e4d58eb5a30d156ea9bed7a8aecd1ca
+  OAuthSwift: 27b34fe80b76b67cd8f45571e0be2432bc9f6de1
   OAuthSwiftAlamofire: e51f11ff579dd4293bfe2a1a24c658caad4dac35
-  OSMSwift: f239d1fcb3956bcf738996baf36ce7da9fb7c1c7
-  SwiftOverpass: 8c796d887465581359b8fd0b52aabdbdc0d1dd9b
+  OSMSwift: effb19dce5c809eb51f39f0eed7e0170d1889d7f
+  SwiftOverpass: c31ea9c142c892d52d535a2eb47c6f3cfa3c93cc
 
-PODFILE CHECKSUM: 53e47b48dba31eb5e93fb7a30af05bfab225ec08
+PODFILE CHECKSUM: fc899957b3d776d1d0d18b42f821faf10f9cb9dc
 
 COCOAPODS: 1.5.3

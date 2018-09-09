@@ -7,116 +7,127 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0670E92FB8611998E58AED42BEC427A2 /* OAuthWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E85C80D27C41FAFC23F7FEC77D9B3B /* OAuthWebViewController.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		070FD9D51250B11BE798116A32A48763 /* OAuthSwiftClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E00933519E295790A72D0D8395A8C9 /* OAuthSwiftClient.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		076645934C014F68B90FE027DD1F83D3 /* DownQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87BAAEF6E7825A326ABA058F10DC13C /* DownQuery.swift */; };
+		036F377DC5DA0BADCD45D0DF3B6D45D5 /* XMLQueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE93EA934A4E09C9563E137A56DB71 /* XMLQueryBuilder.swift */; };
+		062D6972856244DEAD77D5D211617F37 /* NodeQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4713C01301A1430FE0B932E75F9667E5 /* NodeQuery.swift */; };
+		0670E92FB8611998E58AED42BEC427A2 /* OAuthWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29288967F6E2E749E1A47CD1076656 /* OAuthWebViewController.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		070FD9D51250B11BE798116A32A48763 /* OAuthSwiftClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD1D57E38CEC9D9172F68875468BDDB /* OAuthSwiftClient.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0A1AF5CBEBF7BF2E7FA7BD542633C997 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F0A3082A1792EA451C056051169C74 /* Foundation.framework */; };
-		0E37FC0900CC0556C089119E4EFD926A /* OAuthSwiftResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAC5601A0C6F9EEBD50BE63F859203B /* OAuthSwiftResponse.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0E37FC0900CC0556C089119E4EFD926A /* OAuthSwiftResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57FB334E0B5B3222BFDAAFBE2F5417D /* OAuthSwiftResponse.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0EA45CC9810F0C7BB7E97E714FF015E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F0A3082A1792EA451C056051169C74 /* Foundation.framework */; };
-		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DF2E106ACE5C5056C43909C010E59 /* Timeline.swift */; };
-		14C6239F686582508AEA4A58F5F66E56 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85487B99B4DD03779F891FBC6998D88 /* Element.swift */; };
-		18192E3874A67154698901D50EE8F55D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4613F15990024697601B1DDC947501 /* Utils.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 05FF20145DE8CB7C4BCB952CD698A8DC /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1C507DAD76677B7F87771F273AC05ABD /* NotificationCenter+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA3C0B9E21EF043B7FC9B6496CB765 /* NotificationCenter+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		20D84C143269E60FBCDFCC30FFB2D6DB /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D512926FD21545060B559003B21961F8 /* Error.swift */; };
+		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F3779C3535825B4CEC2B23925BC6A7 /* Timeline.swift */; };
+		123792579FF3BE659E714A9F5D4EDE0B /* SwiftOverpass-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E52632A76233D0B2EECC5C626DA24D2 /* SwiftOverpass-dummy.m */; };
+		14C6239F686582508AEA4A58F5F66E56 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED155E68041DE03C9D94CFA2046B853A /* Element.swift */; };
+		18192E3874A67154698901D50EE8F55D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED909C331CCDD4FFCF23D448377FDB1 /* Utils.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AE918E09579140B516CDE913D943A101 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C507DAD76677B7F87771F273AC05ABD /* NotificationCenter+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CF27470FA1FBB4966E3CD6F6DD8728 /* NotificationCenter+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		20D84C143269E60FBCDFCC30FFB2D6DB /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F7894B5AD937B19793DC91D710756 /* Error.swift */; };
 		20EF9C03A92C195EA897219E914B3F89 /* HTTPRequestHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2335A48C8360A59C5BA8998D79129A88 /* HTTPRequestHandling.swift */; };
 		2714A9FB7E1FF4E291B79F2752C7A431 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33A49FCD358C8DEF119EF488146D4FF /* KeychainAccess.framework */; };
-		2758CD107D81A4B5951A58608D939FEF /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC4CC303DEF80ACEF28A63A11F2D89 /* Options.swift */; };
+		2758CD107D81A4B5951A58608D939FEF /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BAA721F6A252B6E47C40B35F6B5C9A /* Options.swift */; };
 		2ACA420E654B6037B74F4C497EE0AFDB /* Pods-OSMSwiftCombined-OSMSwift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FBF07B7B3D90781DF6593D3C57DADCA /* Pods-OSMSwiftCombined-OSMSwift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CF8DA8BEF30DE02D64EC2AD922B090D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F0A3082A1792EA451C056051169C74 /* Foundation.framework */; };
-		31A9CB8F37997988437B176D0A809599 /* OAuthSwiftURLHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EEE25FC7CC24E61255F8A76C96C457 /* OAuthSwiftURLHandlerType.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		31A9CB8F37997988437B176D0A809599 /* OAuthSwiftURLHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84F69BBC2C2D14967E2F0E6EFFB17D0 /* OAuthSwiftURLHandlerType.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		325041A7BA4D88DBD4126426D5F6BE02 /* NodeReferable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DA53B95B3BA9A2A822E54B72B5EEE3 /* NodeReferable.swift */; };
 		33794337F987561A2F8C31E84E8FD777 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0334379ABC07D774022F0D1EE7E16DD /* APIClient.swift */; };
-		3432B14E22B2B1EE4A1CF5C44D8DC51D /* SwiftOverpass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872EFAB4A4D8D8BD9450B9F60F542811 /* SwiftOverpass.swift */; };
 		34875298323621135CDDBF1702A23DDE /* AlamofireHTTPRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F184E5DDBFA83D2D99A18311656E06C9 /* AlamofireHTTPRequestHandler.swift */; };
-		353F58E7CC2C710F05CC9422F41D1377 /* Int+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF65FE90334C37DF2DFF86C93E722B9 /* Int+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40858B0E37EE99F57B3C0DEB1DB1DD3C /* TaskDelegate.swift */; };
+		353F58E7CC2C710F05CC9422F41D1377 /* Int+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF68D9DFEB7C2B4BD08A39FC041E0CE /* Int+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3564A6C0A33CDA839591AC746D5A1481 /* WayReferable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E8CAA64EAF3BBB52F570EAF348531E /* WayReferable.swift */; };
+		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A9D6599EAD7B3629586E3AEB17F53 /* TaskDelegate.swift */; };
+		3B6083D789422FC29E98E70F1560221E /* OverpassRelation+AEXMLElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337D58361F3F3ECC124F794070CEFBA2 /* OverpassRelation+AEXMLElement.swift */; };
 		3C0CBD46254F7D78FE31DCF856DE40D4 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D384B75974E061F52C6B9983510EBF7 /* OAuthSwift.framework */; };
 		3DF20F3513B52996E2AD400D88A0E77B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F0A3082A1792EA451C056051169C74 /* Foundation.framework */; };
-		3E09C110A61852F344D95E743E0E9EDA /* UIApplication+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDDF61E9CC25DC35568E7F06B5317A /* UIApplication+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		3F32E4E755ACB30B8701F53C3B8917B5 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790E6DFC448F4619918CDB79EFF833C5 /* Parser.swift */; };
+		3E09C110A61852F344D95E743E0E9EDA /* UIApplication+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C490AF691F07FD603AFC35882C6CAB /* UIApplication+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3F32E4E755ACB30B8701F53C3B8917B5 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D33B8ED89FE86F7C2229663B09EB09D /* Parser.swift */; };
 		427FDB79FCD439229E379A69A5261A72 /* OAuthSwiftAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A67052900DF470642604B64E035755 /* OAuthSwiftAlamofire.framework */; };
-		47CD4222F833531A807BE086D693ED65 /* OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173BC81851FB40664747290335A95553 /* OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		493C0FE146EE7A20A861EBDE7BBDE0FC /* SwiftOverpass.h in Headers */ = {isa = PBXBuildFile; fileRef = CDA1B107C29583CF57D6757B15E2C8AA /* SwiftOverpass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4974D6FE49157F2204B47F79703FE60B /* Collection+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C8D9872E2EB407DF167114117BA418 /* Collection+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		47CD4222F833531A807BE086D693ED65 /* OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E224378E2F7D9695874582CC4FBECF5A /* OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		493C0FE146EE7A20A861EBDE7BBDE0FC /* SwiftOverpass.h in Headers */ = {isa = PBXBuildFile; fileRef = BA8D085758198D43FD869B053908A6CE /* SwiftOverpass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4974D6FE49157F2204B47F79703FE60B /* Collection+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825E150782E76957421AA11E6EF69A17 /* Collection+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		499A2E496ED70D2B13D1095AD07FF592 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F0A3082A1792EA451C056051169C74 /* Foundation.framework */; };
-		50E7CB02530E4C7D9BFA05196ACFC0B0 /* URL+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F23DEA11D6CD6FB9FD3FF86A4055EAD /* URL+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD779ABE359E0A31E00098577A19F4C /* Request.swift */; };
-		55DB83755382C8231FE5CDFD9F16C701 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42632A50D55CB199E2CFDA8BCEC2C834 /* SHA1.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		57A42E93DF09EF78ADC7C454C379524B /* OAuth2Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874B8C83E4695A21E434DC264231F66D /* OAuth2Swift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		5C67BD33BEAD1A739CEC2A825F38C257 /* AEXML-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 333189683EF76A5AC491BC9915A3A902 /* AEXML-dummy.m */; };
-		5DD1C9E300865986CBCBC18E90F5D79D /* AEXML-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A11EE4844E043655BCBFDCDF72AD405 /* AEXML-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A4C68B13ECB8E3935480B723520620B /* QueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA3C02873101E66195807028BDE3D83 /* QueryBuilder.swift */; };
+		4E0F1362B9998A73F355CB92FEEBCC50 /* OverpassRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF24B08BF7F14838118BA05F0CA695 /* OverpassRelation.swift */; };
+		50E7CB02530E4C7D9BFA05196ACFC0B0 /* URL+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C181E28B3EFDF3D21930AB5A139F88 /* URL+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = F631A3F2CC168A2EC92396AA67EE629E /* Request.swift */; };
+		55DB83755382C8231FE5CDFD9F16C701 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4633A11E609D02E63DA75008BAF60EF5 /* SHA1.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		55EAD51C8D5058940E5DA3C88500B491 /* OverpassTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A11B54F7AB7539008E240F6500D75 /* OverpassTag.swift */; };
+		57A42E93DF09EF78ADC7C454C379524B /* OAuth2Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E8F6F9CAAFA7042DC255D047108360 /* OAuth2Swift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5C67BD33BEAD1A739CEC2A825F38C257 /* AEXML-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 178FDCE48F754C5DAD6BD0FB4678B650 /* AEXML-dummy.m */; };
+		5CEA5E4997D75743F3D70A54418341A1 /* OverpassResponseElementsProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDC88A24BB39FD878A5360600DB4C75 /* OverpassResponseElementsProviding.swift */; };
+		5DD1C9E300865986CBCBC18E90F5D79D /* AEXML-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A600C120A573F7F64897FDB1B95E99 /* AEXML-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5DFB4326EAD84738B83F0E8B8A33B4C6 /* SwiftOverpass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A9AD6F77FEA99FEF01FC52E407F7B3 /* SwiftOverpass.framework */; };
-		60401BE1466432D67BEC5FC667372016 /* OAuthSwiftMultipartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6438A2FE75B09AE85C8BB9CED1A316F4 /* OAuthSwiftMultipartData.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9A7ED54A3D08900241D100B5F02739 /* DispatchQueue+Alamofire.swift */; };
-		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA85ACF22D3074759ADB05C9AD7DA95 /* ServerTrustPolicy.swift */; };
+		60401BE1466432D67BEC5FC667372016 /* OAuthSwiftMultipartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F6EBE3890C2258AF2DEBF2A29BDB5B /* OAuthSwiftMultipartData.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		60B6687B8850E3E10EA346A9F4AE5A76 /* OverpassNode+AEXMLElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDF14ECD1676EB5A0310AC27E9EE0D7 /* OverpassNode+AEXMLElement.swift */; };
+		60F2550452CE14B941945608CF17F5B5 /* OverpassWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081A34F0C0C73FC6E0200CA18F7DBA23 /* OverpassWay.swift */; };
+		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C1462EBE707EAA30908134144CE88 /* DispatchQueue+Alamofire.swift */; };
+		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2A3D0405E796D91A55E7D0E8996ED0 /* ServerTrustPolicy.swift */; };
 		66CEC7E19AD96B04B9DE0426FC073EED /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2AD8F431980333F1D17452EF81943 /* Permission.swift */; };
+		6851B4E7FD991E0A33F8BD1D83F98DF1 /* RelationQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8418B8F1534603155B36ACC0A662E9E /* RelationQuery.swift */; };
 		6CFD0BFEACABD0272486192E12D30284 /* KeychainHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200EFA51AA158057E31C2ED96BE4D01 /* KeychainHandling.swift */; };
-		6E4E7C06A1B9C35408BECAEFEA3C3AD5 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5E4A731D0F649C846FA7C61C469D6 /* Document.swift */; };
-		7063FD42D71F725453CEB6F40B131B72 /* OverpassQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC86729B8CA075F953B62B7C8A32971 /* OverpassQuery.swift */; };
+		6E4E7C06A1B9C35408BECAEFEA3C3AD5 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0810FFBB099C6AE9A0A743CB3A8C88 /* Document.swift */; };
 		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F0A3082A1792EA451C056051169C74 /* Foundation.framework */; };
-		76156F69F24C8F026D1E934708AAAE97 /* OverpassResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CCA625EA05575CA64ABB5A91CAD7D4 /* OverpassResponse.swift */; };
-		76AD1AF90E187C0C8FD636C4605F0F5C /* OAuthSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F49C5EC6720CF554794F9375B5269FD0 /* OAuthSwift-dummy.m */; };
-		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D0EE0D54CD304CC7FF38115E52A7FC /* SessionDelegate.swift */; };
-		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92ED8755A18D4113F574A9A9D89292F /* Result.swift */; };
-		81BC0371676862A4A9B44058BD6E5509 /* OverpassNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4EFDE74D68F357AF5803C49C035C67 /* OverpassNode.swift */; };
-		8483482AB25E39C543CD98F9837D6C38 /* OAuthSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA61C9C12A255B0A09C58E64540E41E /* OAuthSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76AD1AF90E187C0C8FD636C4605F0F5C /* OAuthSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C2CB3318DD99DA4C5421B422DC7F56 /* OAuthSwift-dummy.m */; };
+		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E8CF557D5C80EB9E74F7A966EB1E7 /* SessionDelegate.swift */; };
+		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4ED76A5FA6F16CDF2DE84F50F5B996 /* Result.swift */; };
+		8418F44C9DD2229E2137E44D1FBF28B6 /* OverpassElementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E753994D8847A2FF27DFFD25DCAF52C9 /* OverpassElementType.swift */; };
+		8483482AB25E39C543CD98F9837D6C38 /* OAuthSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CBFC14A378C8BB644D3D5D0EABBF912 /* OAuthSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8AE25C5D434214F9D1AB7F73C12DC4C1 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D384B75974E061F52C6B9983510EBF7 /* OAuthSwift.framework */; };
-		8E93D70260322CDB808445FF92430CD9 /* OverpassRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F437B4D2BAE3D29446C2EE4CFDEB18 /* OverpassRelation.swift */; };
+		902AEB2F011C4C8DC80DB04252EE56BF /* OverpassNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB682E3A4082D68A6C2BAF576C8ED4C /* OverpassNode.swift */; };
 		906EAAB1F09B7F9BEDF0B1F7F637CCD3 /* KeychainAccessKeychainHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A4F9C595149FFD63DA36414AC4C792 /* KeychainAccessKeychainHandler.swift */; };
-		916A4666985E3DCCA2F8D1EF422C27BE /* Dictionary+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA591D4F9B6215AE2E56BF6A5C0F5DB /* Dictionary+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		96ED594F55D528F343A156CAECB43349 /* RelationQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CFFD23FF1BA74F2FD81EE72D924A4 /* RelationQuery.swift */; };
+		916A4666985E3DCCA2F8D1EF422C27BE /* Dictionary+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B19BDFD1B0CCA51FACC21AD2534E53 /* Dictionary+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		97761E609EC083B3D28A73DE26E91C17 /* OSMSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A185B8EF6DE2A25DB70226EB474CAF /* OSMSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		98201FD913000EE036B3320C5BC1111D /* Pods-OSMSwiftCombined-OSMSwift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D39665796B853ECE68EA60CBE38283 /* Pods-OSMSwiftCombined-OSMSwift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9CAC899B9FA890CA11120C2BC1E0D4F9 /* OAuth1Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B196399A27E2025DAFEE3D244D11D3 /* OAuth1Swift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		9CC1409D0416537A432578A3FA064B2F /* UpQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A138BDD3405475B8BC90357C2E6583E /* UpQuery.swift */; };
-		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB9095625B27590651291662B0315D /* AFError.swift */; };
+		9AFCC3205B961EAF0D3A8CDBB62EAC10 /* OverpassEntity+AEXMLElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32ED60FB21FAFEFD78DB156A6F4732E /* OverpassEntity+AEXMLElement.swift */; };
+		9CAC899B9FA890CA11120C2BC1E0D4F9 /* OAuth1Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC3C65AEF87E2D5498623050D156F02 /* OAuth1Swift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822109C285027E7EFCBE71B5BD9312D3 /* AFError.swift */; };
 		9FAD1F416BDB2EE38B5975AF2D448C2B /* OAuthHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EC0CE3E31C2864BC41230FB7F4D /* OAuthHandling.swift */; };
-		9FEE351C0CCD57E50D189CE84D984277 /* OAuthSwiftHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FF157C1AECFE3E5DE318022D2391C /* OAuthSwiftHTTPRequest.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D073FA085ABA01A00C1F233EDED05C10 /* NetworkReachabilityManager.swift */; };
+		9FEE351C0CCD57E50D189CE84D984277 /* OAuthSwiftHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F704296C94D1C07962F342ACC21AD296 /* OAuthSwiftHTTPRequest.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66139556DAFD87311252D9A0897B8BE2 /* NetworkReachabilityManager.swift */; };
 		A3229B47B342E5BC1A5816270E755EE9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAA10262070AA584DF7ED0015034DEE /* Alamofire.framework */; };
-		A5168844153C91A0503F874EB38FE28A /* OAuthSwiftAlamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D72A3D26AA42DAB86A2935745A3CC88 /* OAuthSwiftAlamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A6CAA0C095FCC4BE4E79D5A774182E69 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917C9AD845657110F892E64C223CCCB3 /* HMAC.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A967960EE4C1C1AF8A3FC3555BABDC58 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34790DCA36B368BB7BDD9781349DB5F4 /* Keychain.swift */; };
-		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9593CEBB44EB0FCA322A8A4EA0A80F /* Alamofire-dummy.m */; };
-		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD9B369CE6879DDF9A3E64B41A94C7A /* SessionManager.swift */; };
+		A5168844153C91A0503F874EB38FE28A /* OAuthSwiftAlamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E046EF51DF77B2F6256C9CE0CF8F9BAE /* OAuthSwiftAlamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6CAA0C095FCC4BE4E79D5A774182E69 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A56AE36C21BC085B0A9EDC3D1E0B77 /* HMAC.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A967960EE4C1C1AF8A3FC3555BABDC58 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68345AE0FFF4589CDF36C99076EF0647 /* Keychain.swift */; };
+		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E840F970C06AE8520C5CF3D5253F3CE /* Alamofire-dummy.m */; };
+		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D780918091BDC8BDF63D4586C2DE94CF /* SessionManager.swift */; };
 		AF13EDFD1B81E92ADD227455F76B82A7 /* OAuthSwiftOAuthHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31133C5B43E2D309CFCED0A3A8A97A14 /* OAuthSwiftOAuthHandler.swift */; };
 		B02CB3A08F3BA3E1CB28D065462374EF /* Pods-OSMSwiftCombined-OSMSwift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB802DB2C06CC9F273A0E9E1C21623D /* Pods-OSMSwiftCombined-OSMSwift_Example-dummy.m */; };
-		B3DFC639E288B9B5D2F68A4BCF0CCDE1 /* NodeQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098C0659E8C6D99FD288A982C5525822 /* NodeQuery.swift */; };
-		B644732B7578BD9C82304EEB98981C0F /* SwiftOverpass-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 058818665CE664A6D6BABB751B4D0772 /* SwiftOverpass-dummy.m */; };
+		B292864876265C14AC6FA9DDFD5FCA38 /* OverpassResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712CD45A28EAC1FA4D6588A05C0F8EA6 /* OverpassResponse.swift */; };
 		B654BA6AAE05EC09FA34C47647AA5657 /* AEXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B96913F324B170C92E53C4B4134C822 /* AEXML.framework */; };
-		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EF47E395BDE94958DED529D0E499FB /* MultipartFormData.swift */; };
-		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C77C7CF1C05D1D41AC33B32C8BE5AD /* Validation.swift */; };
-		BDA750A5542A5D826A35B1BE6A69574A /* KeychainAccess-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DAAA2602512B984AE0B2C6D18D623B70 /* KeychainAccess-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749667A490F565D5D059D78E150F44E0 /* ParameterEncoding.swift */; };
+		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A97150BCE454DAD16930C43A85BBE /* MultipartFormData.swift */; };
+		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6264B8D0E980D99DF05AF4F203ABBD /* Validation.swift */; };
+		BCAB7CB3A329AB87B601DD7E7C030407 /* OverpassElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08677D575AFC8F301402D39555025A6 /* OverpassElement.swift */; };
+		BDA750A5542A5D826A35B1BE6A69574A /* KeychainAccess-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77F7F98F3D04241B73902E1E4127622B /* KeychainAccess-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57107F7D9A6BDC0DA3DEE532BE6407 /* ParameterEncoding.swift */; };
+		BED910A395CE367D4DB31E744F386212 /* RelationReferable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48319E0EFB0BCD680F11A512EF6195F0 /* RelationReferable.swift */; };
 		C05888C12C6E1A091E7C8BAB7098891E /* Pods-OSMSwiftCombined-OSMSwift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0476ABD14175B646236167A4ABC5DB0 /* Pods-OSMSwiftCombined-OSMSwift_Tests-dummy.m */; };
-		C2A5B1124C3E4FA4EB0CB3E58B6F009A /* Objc.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8378DD4705CDD337E098CE12D23A2A /* Objc.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C2A5B1124C3E4FA4EB0CB3E58B6F009A /* Objc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBA22212D6BDFEA0BB0067089BA9192 /* Objc.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C3BB7DAC454B1CC9503D0500A8B24B16 /* WayQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E01D0E4676F41B11EF61C24536884 /* WayQuery.swift */; };
 		C456AEBA7FACA838B8EF6CE4F7029C3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F0A3082A1792EA451C056051169C74 /* Foundation.framework */; };
 		C6DD74C49859AA805642A6D9BA77F9FD /* AEXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B96913F324B170C92E53C4B4134C822 /* AEXML.framework */; };
 		C71499BA4694EAF9E18D158E4827E0B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F0A3082A1792EA451C056051169C74 /* Foundation.framework */; };
 		CA06F976DEC278868C1DACE544E69015 /* OSMSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA89582D8E8EBF13881A008998D64C7D /* OSMSwift-dummy.m */; };
-		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F94DD7D576FD3E10C6783B6A3F70FB /* Response.swift */; };
-		D0B12848D81DE0C17A11541F26C4F03F /* Data+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B115BF39756A63C4FDE3270CA1442F7 /* Data+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D3F6629E659783DC7BA6B4252400D2DD /* OAuthSwiftRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B7F53B8777D2B4605EF68C3C420CA2 /* OAuthSwiftRequestAdapter.swift */; };
-		D487ED639D57891CF1E150EB0EC6FA4D /* OAuthSwiftAlamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE91A85FC4826EDAF408154083A29A6 /* OAuthSwiftAlamofire-dummy.m */; };
-		D4AE05BAA8438566CC4F412A092BD106 /* BoudingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6759B21A0158A5CCEBD910DD5F841E9D /* BoudingBox.swift */; };
-		D5D18140FBA4D0DF4CDA927AAAB49711 /* SwiftOverpass-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CCB5418DA5421A7451082EE4D7A104C6 /* SwiftOverpass-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D823270043210DD356225D7700FAF3E4 /* KeychainAccess-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C37F56B57DC92370101316C69F6F5A9 /* KeychainAccess-dummy.m */; };
+		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2731DFAF72C4EBA0FF0076A94AD504D5 /* Response.swift */; };
+		CDD837C00808F223643FD8B09061EDF1 /* BoudingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC54C6797EDB4E71C0058ECCED07DC6 /* BoudingBox.swift */; };
+		D0B12848D81DE0C17A11541F26C4F03F /* Data+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B43DC8D9F8BE9A87AE39608FCF061DC /* Data+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D3F6629E659783DC7BA6B4252400D2DD /* OAuthSwiftRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4C476D548F09A391760644B6E4FFC0 /* OAuthSwiftRequestAdapter.swift */; };
+		D487ED639D57891CF1E150EB0EC6FA4D /* OAuthSwiftAlamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5760A0189276A1C69CAFB24BE44D8 /* OAuthSwiftAlamofire-dummy.m */; };
+		D5D18140FBA4D0DF4CDA927AAAB49711 /* SwiftOverpass-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DC31DF316E957D318A59086808A9A036 /* SwiftOverpass-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5ED71700FB7A15D08726A361AED9540 /* OverpassQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAA11636FEA5904E335D4D33D6A075E /* OverpassQuery.swift */; };
+		D823270043210DD356225D7700FAF3E4 /* KeychainAccess-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C13C5783B75534A1CA6574DE3528FAA9 /* KeychainAccess-dummy.m */; };
 		D85D375BB577E03A9B1A7BD39822D860 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAA10262070AA584DF7ED0015034DEE /* Alamofire.framework */; };
+		D99C8AF42736D9BB6FE2E762FC4E12D9 /* OverpassWay+AEXMLElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55D924249E2BDBECC8433199A995C34 /* OverpassWay+AEXMLElement.swift */; };
 		DA9BC4115AFFEEDC5A87A9BD85F0F8F0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAA10262070AA584DF7ED0015034DEE /* Alamofire.framework */; };
 		DDE2280287D3AE1649A70C31B4EF218C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F0A3082A1792EA451C056051169C74 /* Foundation.framework */; };
-		E0E573C57B1345C15E6C6ACEBEE1094D /* WayQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FDB77EBF63E3B952DA1B1CA38CA191 /* WayQuery.swift */; };
 		E38431E3AE943204656761E5DDEB98BD /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EA1B8B2C51ECC842129FFDD282D32E /* BoundingBox.swift */; };
-		E410D3DC1E4F1C4A84F6EA1E3EAD2BC1 /* NSError+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DEF3379B69B47C1A4197D367AB9480 /* NSError+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E8DA6F03D35F08B6776150630BCA3458 /* OverpassWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F8E49556F54344E5C902E4BA3BA8B6 /* OverpassWay.swift */; };
-		ED6975D7774A49BA75DF6E22203372C2 /* String+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AC03C595C2A0C817E0A001C4F44F12 /* String+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E410D3DC1E4F1C4A84F6EA1E3EAD2BC1 /* NSError+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4EA3A22D6A43EB7BBCFF2B1B13138D /* NSError+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		ED6975D7774A49BA75DF6E22203372C2 /* String+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93F35774D68127FF94AEDC00AB896C7 /* String+OAuthSwift.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EDE8715456489E2ED7C2872E3A1EC787 /* Permission+XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE865407E6463C15DB98D0F6A846264 /* Permission+XML.swift */; };
-		EFB7B3E0A28D3581BA5D74C1932C310E /* OAuthSwiftError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4B3ED0B5E18C42DF5DB716B13D5BC5 /* OAuthSwiftError.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADFFBE3F08C4C611A4119BE753BA7D6 /* Notifications.swift */; };
-		F52CAEF39E74887C203830CC6F1F6FE8 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3AEFF47BADBFCE82EAD913F9E41256 /* HTTPMethod.swift */; };
-		F62F62C967589B6C3F2B46DE4C3A7CB6 /* OAuthSwiftCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B53438514B1858606F73EC4F0573E72 /* OAuthSwiftCredential.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF04F9080878C8AD186E8AD2F48981A /* ResponseSerialization.swift */; };
-		F74E9C727CFAB7E0339D6291DB0AC496 /* OverpassTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93059BF08373A3FD4391C421998EEB93 /* OverpassTag.swift */; };
-		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = E146E07318603607E198F3CD8AC56A09 /* Alamofire.swift */; };
+		EFB7B3E0A28D3581BA5D74C1932C310E /* OAuthSwiftError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC1E28D157F9F76719B2B0B26301D1 /* OAuthSwiftError.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5850A85CB198142DA079A837882F85D8 /* Notifications.swift */; };
+		F52CAEF39E74887C203830CC6F1F6FE8 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7056A2D6E1EF04967F6E99D7999BC850 /* HTTPMethod.swift */; };
+		F62F62C967589B6C3F2B46DE4C3A7CB6 /* OAuthSwiftCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E20E2488054976D6196A09AD74BABC1 /* OAuthSwiftCredential.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9C7FF14A8B54433DCD7E7ABC246EBA /* ResponseSerialization.swift */; };
+		F815599DD6517A2A36110B3608910899 /* SwiftOverpass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49678F53FEEB102DEBBB9FEF8CB78174 /* SwiftOverpass.swift */; };
+		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B69F5DE861CEDC61060E7DA6135C855 /* Alamofire.swift */; };
+		FF75A23E006917EE5950CEA7264F035F /* OverpassTag+AEXMLElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E954039EDA25C5B4EC4802EC7E447 /* OverpassTag+AEXMLElement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -291,161 +302,172 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0028E4D1EA898A31AD57BD98863D1E08 /* OSMSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OSMSwift.framework; path = OSMSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		058818665CE664A6D6BABB751B4D0772 /* SwiftOverpass-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftOverpass-dummy.m"; sourceTree = "<group>"; };
-		05FF20145DE8CB7C4BCB952CD698A8DC /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		064A19790401BD60121CC70656E172FF /* AEXML.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AEXML.xcconfig; sourceTree = "<group>"; };
-		091108893D81B0F2A9EB309FAA6752D2 /* OAuthSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OAuthSwift.xcconfig; sourceTree = "<group>"; };
-		098C0659E8C6D99FD288A982C5525822 /* NodeQuery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NodeQuery.swift; path = SwiftOverpass/NodeQuery.swift; sourceTree = "<group>"; };
+		0028E4D1EA898A31AD57BD98863D1E08 /* OSMSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OSMSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		01F6EBE3890C2258AF2DEBF2A29BDB5B /* OAuthSwiftMultipartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftMultipartData.swift; path = Sources/OAuthSwiftMultipartData.swift; sourceTree = "<group>"; };
+		081A34F0C0C73FC6E0200CA18F7DBA23 /* OverpassWay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverpassWay.swift; path = SwiftOverpass/Models/Elements/OverpassWay.swift; sourceTree = "<group>"; };
 		0B96913F324B170C92E53C4B4134C822 /* AEXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AEXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D72A3D26AA42DAB86A2935745A3CC88 /* OAuthSwiftAlamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OAuthSwiftAlamofire-umbrella.h"; sourceTree = "<group>"; };
+		0BDC88A24BB39FD878A5360600DB4C75 /* OverpassResponseElementsProviding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverpassResponseElementsProviding.swift; path = SwiftOverpass/Models/Elements/OverpassResponseElementsProviding.swift; sourceTree = "<group>"; };
+		0CBE93EA934A4E09C9563E137A56DB71 /* XMLQueryBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLQueryBuilder.swift; path = SwiftOverpass/Queries/XMLQueryBuilder.swift; sourceTree = "<group>"; };
+		0CBFC14A378C8BB644D3D5D0EABBF912 /* OAuthSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OAuthSwift-umbrella.h"; sourceTree = "<group>"; };
+		0E4EA3A22D6A43EB7BBCFF2B1B13138D /* NSError+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSError+OAuthSwift.swift"; path = "Sources/NSError+OAuthSwift.swift"; sourceTree = "<group>"; };
+		0E52632A76233D0B2EECC5C626DA24D2 /* SwiftOverpass-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftOverpass-dummy.m"; sourceTree = "<group>"; };
+		11C490AF691F07FD603AFC35882C6CAB /* UIApplication+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+OAuthSwift.swift"; path = "Sources/UIApplication+OAuthSwift.swift"; sourceTree = "<group>"; };
+		12E8CAA64EAF3BBB52F570EAF348531E /* WayReferable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WayReferable.swift; path = SwiftOverpass/Queries/Mixins/WayReferable.swift; sourceTree = "<group>"; };
 		15A67052900DF470642604B64E035755 /* OAuthSwiftAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OAuthSwiftAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		173BC81851FB40664747290335A95553 /* OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwift.swift; path = Sources/OAuthSwift.swift; sourceTree = "<group>"; };
-		18E9E069CE6A36FEE9882EAD08934E81 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		1A11EE4844E043655BCBFDCDF72AD405 /* AEXML-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AEXML-umbrella.h"; sourceTree = "<group>"; };
-		1B0B856101E9F74F08F8449007C82938 /* OAuthSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OAuthSwift.modulemap; sourceTree = "<group>"; };
-		21E85C80D27C41FAFC23F7FEC77D9B3B /* OAuthWebViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthWebViewController.swift; path = Sources/OAuthWebViewController.swift; sourceTree = "<group>"; };
+		178FDCE48F754C5DAD6BD0FB4678B650 /* AEXML-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AEXML-dummy.m"; sourceTree = "<group>"; };
+		180C1462EBE707EAA30908134144CE88 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		18C181E28B3EFDF3D21930AB5A139F88 /* URL+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+OAuthSwift.swift"; path = "Sources/URL+OAuthSwift.swift"; sourceTree = "<group>"; };
+		1D33B8ED89FE86F7C2229663B09EB09D /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Sources/Parser.swift; sourceTree = "<group>"; };
+		207510645B179377F094B1604D9F5B93 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
 		2200EFA51AA158057E31C2ED96BE4D01 /* KeychainHandling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeychainHandling.swift; sourceTree = "<group>"; };
+		224E8CF557D5C80EB9E74F7A966EB1E7 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		2335A48C8360A59C5BA8998D79129A88 /* HTTPRequestHandling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HTTPRequestHandling.swift; sourceTree = "<group>"; };
+		2731DFAF72C4EBA0FF0076A94AD504D5 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
 		28FB036F8A84DE577CAC74EC100A6966 /* Pods-OSMSwiftCombined-OSMSwift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OSMSwiftCombined-OSMSwift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		2AAC5601A0C6F9EEBD50BE63F859203B /* OAuthSwiftResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftResponse.swift; path = Sources/OAuthSwiftResponse.swift; sourceTree = "<group>"; };
-		2B9A7ED54A3D08900241D100B5F02739 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		2B43DC8D9F8BE9A87AE39608FCF061DC /* Data+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+OAuthSwift.swift"; path = "Sources/Data+OAuthSwift.swift"; sourceTree = "<group>"; };
 		2D384B75974E061F52C6B9983510EBF7 /* OAuthSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OAuthSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DC86729B8CA075F953B62B7C8A32971 /* OverpassQuery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverpassQuery.swift; path = SwiftOverpass/OverpassQuery.swift; sourceTree = "<group>"; };
 		31133C5B43E2D309CFCED0A3A8A97A14 /* OAuthSwiftOAuthHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OAuthSwiftOAuthHandler.swift; sourceTree = "<group>"; };
-		32E00933519E295790A72D0D8395A8C9 /* OAuthSwiftClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftClient.swift; path = Sources/OAuthSwiftClient.swift; sourceTree = "<group>"; };
-		333189683EF76A5AC491BC9915A3A902 /* AEXML-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AEXML-dummy.m"; sourceTree = "<group>"; };
-		34790DCA36B368BB7BDD9781349DB5F4 /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = Lib/KeychainAccess/Keychain.swift; sourceTree = "<group>"; };
+		337D58361F3F3ECC124F794070CEFBA2 /* OverpassRelation+AEXMLElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OverpassRelation+AEXMLElement.swift"; path = "SwiftOverpass/Extensions/OverpassRelation+AEXMLElement.swift"; sourceTree = "<group>"; };
 		34A185B8EF6DE2A25DB70226EB474CAF /* OSMSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OSMSwift-umbrella.h"; sourceTree = "<group>"; };
-		34CCA625EA05575CA64ABB5A91CAD7D4 /* OverpassResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverpassResponse.swift; path = SwiftOverpass/OverpassResponse.swift; sourceTree = "<group>"; };
-		39F8E49556F54344E5C902E4BA3BA8B6 /* OverpassWay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverpassWay.swift; path = SwiftOverpass/OverpassWay.swift; sourceTree = "<group>"; };
-		3D9593CEBB44EB0FCA322A8A4EA0A80F /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		3DD779ABE359E0A31E00098577A19F4C /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		367606F0018405A04B20CAEFE717B4DA /* AEXML.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AEXML.modulemap; sourceTree = "<group>"; };
+		38A56AE36C21BC085B0A9EDC3D1E0B77 /* HMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = Sources/HMAC.swift; sourceTree = "<group>"; };
+		3B57107F7D9A6BDC0DA3DEE532BE6407 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		40466CC8A8691E736CA82AE457E2C0DB /* Pods-OSMSwiftCombined-OSMSwift_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OSMSwiftCombined-OSMSwift_Tests-resources.sh"; sourceTree = "<group>"; };
-		40858B0E37EE99F57B3C0DEB1DB1DD3C /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
-		40DEF3379B69B47C1A4197D367AB9480 /* NSError+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSError+OAuthSwift.swift"; path = "Sources/NSError+OAuthSwift.swift"; sourceTree = "<group>"; };
+		418A7E909F905CDA89662E659BCCFCDE /* SwiftOverpass.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftOverpass.xcconfig; sourceTree = "<group>"; };
 		41A4F9C595149FFD63DA36414AC4C792 /* KeychainAccessKeychainHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeychainAccessKeychainHandler.swift; sourceTree = "<group>"; };
-		42632A50D55CB199E2CFDA8BCEC2C834 /* SHA1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA1.swift; path = Sources/SHA1.swift; sourceTree = "<group>"; };
+		433E954039EDA25C5B4EC4802EC7E447 /* OverpassTag+AEXMLElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OverpassTag+AEXMLElement.swift"; path = "SwiftOverpass/Extensions/OverpassTag+AEXMLElement.swift"; sourceTree = "<group>"; };
 		443320D070699EBCF80BF87B28D59B64 /* Pods-OSMSwiftCombined-OSMSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OSMSwiftCombined-OSMSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
-		4616A978F4AC03E2E88F3EA6A82BD804 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4633A11E609D02E63DA75008BAF60EF5 /* SHA1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA1.swift; path = Sources/SHA1.swift; sourceTree = "<group>"; };
+		4713C01301A1430FE0B932E75F9667E5 /* NodeQuery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NodeQuery.swift; path = SwiftOverpass/Queries/NodeQuery.swift; sourceTree = "<group>"; };
+		47323B56C1285856E37CC75040FC9B28 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48319E0EFB0BCD680F11A512EF6195F0 /* RelationReferable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RelationReferable.swift; path = SwiftOverpass/Queries/Mixins/RelationReferable.swift; sourceTree = "<group>"; };
+		48F3779C3535825B4CEC2B23925BC6A7 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		49678F53FEEB102DEBBB9FEF8CB78174 /* SwiftOverpass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftOverpass.swift; path = SwiftOverpass/SwiftOverpass.swift; sourceTree = "<group>"; };
 		4A3341D2D77424EE3E2DA24D3704E537 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AAA10262070AA584DF7ED0015034DEE /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4ADFFBE3F08C4C611A4119BE753BA7D6 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		4B0E4262693D02558EC22A00D335DA63 /* KeychainAccess.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeychainAccess.modulemap; sourceTree = "<group>"; };
-		4C37F56B57DC92370101316C69F6F5A9 /* KeychainAccess-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeychainAccess-dummy.m"; sourceTree = "<group>"; };
-		4CD9B369CE6879DDF9A3E64B41A94C7A /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
-		4D25CF803110B57F64E0D0C5FCCFA6CA /* Pods_OSMSwiftCombined_OSMSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OSMSwiftCombined_OSMSwift_Tests.framework; path = "Pods-OSMSwiftCombined-OSMSwift_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DF5E13376B04720161C2EB1B57F1885 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C12E865FBA053CAA6D302D9CA148D16 /* OAuthSwiftAlamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OAuthSwiftAlamofire.modulemap; sourceTree = "<group>"; };
+		4CA80AD3DB9C54F6FA1664BF9CCBC176 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		4D25CF803110B57F64E0D0C5FCCFA6CA /* Pods_OSMSwiftCombined_OSMSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OSMSwiftCombined_OSMSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D6264B8D0E980D99DF05AF4F203ABBD /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		4DF5E13376B04720161C2EB1B57F1885 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E1A9D6599EAD7B3629586E3AEB17F53 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		4E840F970C06AE8520C5CF3D5253F3CE /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		4FBF07B7B3D90781DF6593D3C57DADCA /* Pods-OSMSwiftCombined-OSMSwift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OSMSwiftCombined-OSMSwift_Tests-umbrella.h"; sourceTree = "<group>"; };
 		4FEA7159580E94D7C8F65A7B1FA8B517 /* Pods-OSMSwiftCombined-OSMSwift_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OSMSwiftCombined-OSMSwift_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		512F8D2EA8D38DE71ABEC178203FDEC5 /* KeychainAccess-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainAccess-prefix.pch"; sourceTree = "<group>"; };
-		55B7F53B8777D2B4605EF68C3C420CA2 /* OAuthSwiftRequestAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftRequestAdapter.swift; path = Sources/OAuthSwiftRequestAdapter.swift; sourceTree = "<group>"; };
 		55D39665796B853ECE68EA60CBE38283 /* Pods-OSMSwiftCombined-OSMSwift_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OSMSwiftCombined-OSMSwift_Example-umbrella.h"; sourceTree = "<group>"; };
 		5846ED86B83CEFD532CF09C40956406D /* Pods-OSMSwiftCombined-OSMSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OSMSwiftCombined-OSMSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		58AD1551D18E6332DBFEF9AD7DAD9951 /* SwiftOverpass.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftOverpass.xcconfig; sourceTree = "<group>"; };
+		5850A85CB198142DA079A837882F85D8 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		593E4FC8D1F2F1D6F8AF2BE762CC41A7 /* KeychainAccess-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainAccess-prefix.pch"; sourceTree = "<group>"; };
 		59EA1B8B2C51ECC842129FFDD282D32E /* BoundingBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
-		5AAED1C73D3FFE6B2BD2F8F8FF649995 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		5B115BF39756A63C4FDE3270CA1442F7 /* Data+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+OAuthSwift.swift"; path = "Sources/Data+OAuthSwift.swift"; sourceTree = "<group>"; };
-		5B53438514B1858606F73EC4F0573E72 /* OAuthSwiftCredential.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftCredential.swift; path = Sources/OAuthSwiftCredential.swift; sourceTree = "<group>"; };
-		5B7FF157C1AECFE3E5DE318022D2391C /* OAuthSwiftHTTPRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftHTTPRequest.swift; path = Sources/OAuthSwiftHTTPRequest.swift; sourceTree = "<group>"; };
-		5CFB6998925AFB1AA8E1507BD00F5C58 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		5D5CFFD23FF1BA74F2FD81EE72D924A4 /* RelationQuery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RelationQuery.swift; path = SwiftOverpass/RelationQuery.swift; sourceTree = "<group>"; };
-		5EBDDF61E9CC25DC35568E7F06B5317A /* UIApplication+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+OAuthSwift.swift"; path = "Sources/UIApplication+OAuthSwift.swift"; sourceTree = "<group>"; };
-		5EF682DC007C920DD8FC8B86E162799F /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		63E8F64767114118EFA9F54E95C787A2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6438A2FE75B09AE85C8BB9CED1A316F4 /* OAuthSwiftMultipartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftMultipartData.swift; path = Sources/OAuthSwiftMultipartData.swift; sourceTree = "<group>"; };
-		65F437B4D2BAE3D29446C2EE4CFDEB18 /* OverpassRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverpassRelation.swift; path = SwiftOverpass/OverpassRelation.swift; sourceTree = "<group>"; };
-		66AF86955A7BA28BF4A09C4FAE313D53 /* SwiftOverpass.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftOverpass.modulemap; sourceTree = "<group>"; };
-		6759B21A0158A5CCEBD910DD5F841E9D /* BoudingBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BoudingBox.swift; path = SwiftOverpass/BoudingBox.swift; sourceTree = "<group>"; };
-		69D0EE0D54CD304CC7FF38115E52A7FC /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
-		6AF65FE90334C37DF2DFF86C93E722B9 /* Int+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+OAuthSwift.swift"; path = "Sources/Int+OAuthSwift.swift"; sourceTree = "<group>"; };
+		5AAED1C73D3FFE6B2BD2F8F8FF649995 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		63B19BDFD1B0CCA51FACC21AD2534E53 /* Dictionary+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+OAuthSwift.swift"; path = "Sources/Dictionary+OAuthSwift.swift"; sourceTree = "<group>"; };
+		66045A1E6790C5E8AC1992EA512435EC /* OAuthSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OAuthSwift-prefix.pch"; sourceTree = "<group>"; };
+		66139556DAFD87311252D9A0897B8BE2 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		68345AE0FFF4589CDF36C99076EF0647 /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = Lib/KeychainAccess/Keychain.swift; sourceTree = "<group>"; };
+		6B69F5DE861CEDC61060E7DA6135C855 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		6BD40C35D2BDC3F1CB547C23F0E29880 /* OSMSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OSMSwift-prefix.pch"; sourceTree = "<group>"; };
-		6BED0EA2D42147003003233C3E60885F /* OAuthSwiftAlamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OAuthSwiftAlamofire.modulemap; sourceTree = "<group>"; };
-		7173217B303BE0ACE68FC28D70131346 /* Pods_OSMSwiftCombined_OSMSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OSMSwiftCombined_OSMSwift_Example.framework; path = "Pods-OSMSwiftCombined-OSMSwift_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C236F2117CCF89E70B99707E2094030 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FC5760A0189276A1C69CAFB24BE44D8 /* OAuthSwiftAlamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OAuthSwiftAlamofire-dummy.m"; sourceTree = "<group>"; };
+		7056A2D6E1EF04967F6E99D7999BC850 /* HTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = Sources/HTTPMethod.swift; sourceTree = "<group>"; };
+		712CD45A28EAC1FA4D6588A05C0F8EA6 /* OverpassResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverpassResponse.swift; path = SwiftOverpass/OverpassResponse.swift; sourceTree = "<group>"; };
+		7173217B303BE0ACE68FC28D70131346 /* Pods_OSMSwiftCombined_OSMSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OSMSwiftCombined_OSMSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7203974299A232FBCB94C5E756A1F098 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72C5868783B1D2607FB82C8CCD5F4D81 /* Pods-OSMSwiftCombined-OSMSwift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OSMSwiftCombined-OSMSwift_Example-frameworks.sh"; sourceTree = "<group>"; };
-		749667A490F565D5D059D78E150F44E0 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		73B210951E3CDD545E049E325333CEA9 /* SwiftOverpass.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftOverpass.modulemap; sourceTree = "<group>"; };
 		751F18BD9EC37683522839CB003DEB01 /* OSMSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OSMSwift.xcconfig; sourceTree = "<group>"; };
-		75C77C7CF1C05D1D41AC33B32C8BE5AD /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
-		790E6DFC448F4619918CDB79EFF833C5 /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Sources/Parser.swift; sourceTree = "<group>"; };
-		79DE41AB144666A0B76D74D41F6566E9 /* AEXML.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AEXML.modulemap; sourceTree = "<group>"; };
-		7ACF129053D780799FD39616E14ED8BD /* SwiftOverpass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftOverpass.framework; path = SwiftOverpass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C215E9A7F009898D021D3C9D74CF17D /* OAuthSwiftAlamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OAuthSwiftAlamofire-prefix.pch"; sourceTree = "<group>"; };
-		7CA591D4F9B6215AE2E56BF6A5C0F5DB /* Dictionary+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+OAuthSwift.swift"; path = "Sources/Dictionary+OAuthSwift.swift"; sourceTree = "<group>"; };
+		77F7F98F3D04241B73902E1E4127622B /* KeychainAccess-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainAccess-umbrella.h"; sourceTree = "<group>"; };
+		7ACF129053D780799FD39616E14ED8BD /* SwiftOverpass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftOverpass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B8A5DF758E9D6E4154E48CBF753857F /* SwiftOverpass-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftOverpass-prefix.pch"; sourceTree = "<group>"; };
+		7DBA22212D6BDFEA0BB0067089BA9192 /* Objc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Objc.swift; path = Sources/Objc.swift; sourceTree = "<group>"; };
 		7DCF3EACCC2655A9B2CC7BB05716FAC1 /* Pods-OSMSwiftCombined-OSMSwift_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OSMSwiftCombined-OSMSwift_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7F4B3ED0B5E18C42DF5DB716B13D5BC5 /* OAuthSwiftError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftError.swift; path = Sources/OAuthSwiftError.swift; sourceTree = "<group>"; };
-		853DF2E106ACE5C5056C43909C010E59 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		86EB9095625B27590651291662B0315D /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
-		872EFAB4A4D8D8BD9450B9F60F542811 /* SwiftOverpass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftOverpass.swift; path = SwiftOverpass/SwiftOverpass.swift; sourceTree = "<group>"; };
-		874B8C83E4695A21E434DC264231F66D /* OAuth2Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Swift.swift; path = Sources/OAuth2Swift.swift; sourceTree = "<group>"; };
-		87CF37FF9972578BCDAA9EAFF3B10E3B /* OSMSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = OSMSwift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		89DA3C0B9E21EF043B7FC9B6496CB765 /* NotificationCenter+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NotificationCenter+OAuthSwift.swift"; path = "Sources/NotificationCenter+OAuthSwift.swift"; sourceTree = "<group>"; };
+		7DF68D9DFEB7C2B4BD08A39FC041E0CE /* Int+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+OAuthSwift.swift"; path = "Sources/Int+OAuthSwift.swift"; sourceTree = "<group>"; };
+		7E9C157A891066531E75A05096A0E433 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		822109C285027E7EFCBE71B5BD9312D3 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		825E150782E76957421AA11E6EF69A17 /* Collection+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Collection+OAuthSwift.swift"; path = "Sources/Collection+OAuthSwift.swift"; sourceTree = "<group>"; };
+		83A600C120A573F7F64897FDB1B95E99 /* AEXML-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AEXML-umbrella.h"; sourceTree = "<group>"; };
+		86F5D3979661074CBE08D335FE5ACDED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87CF37FF9972578BCDAA9EAFF3B10E3B /* OSMSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = OSMSwift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8A5E71C2F5EEC4898C6F90BCC4984668 /* Pods-OSMSwiftCombined-OSMSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OSMSwiftCombined-OSMSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		8BC54C6797EDB4E71C0058ECCED07DC6 /* BoudingBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BoudingBox.swift; path = SwiftOverpass/BoudingBox.swift; sourceTree = "<group>"; };
 		8CE865407E6463C15DB98D0F6A846264 /* Permission+XML.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Permission+XML.swift"; sourceTree = "<group>"; };
-		8F23DEA11D6CD6FB9FD3FF86A4055EAD /* URL+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+OAuthSwift.swift"; path = "Sources/URL+OAuthSwift.swift"; sourceTree = "<group>"; };
+		8DC3C65AEF87E2D5498623050D156F02 /* OAuth1Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth1Swift.swift; path = Sources/OAuth1Swift.swift; sourceTree = "<group>"; };
+		8E20E2488054976D6196A09AD74BABC1 /* OAuthSwiftCredential.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftCredential.swift; path = Sources/OAuthSwiftCredential.swift; sourceTree = "<group>"; };
 		8FB802DB2C06CC9F273A0E9E1C21623D /* Pods-OSMSwiftCombined-OSMSwift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OSMSwiftCombined-OSMSwift_Example-dummy.m"; sourceTree = "<group>"; };
-		917C9AD845657110F892E64C223CCCB3 /* HMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = Sources/HMAC.swift; sourceTree = "<group>"; };
-		93059BF08373A3FD4391C421998EEB93 /* OverpassTag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverpassTag.swift; path = SwiftOverpass/OverpassTag.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9A138BDD3405475B8BC90357C2E6583E /* UpQuery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UpQuery.swift; path = SwiftOverpass/UpQuery.swift; sourceTree = "<group>"; };
-		9AB7D4A36C8BDE2E81376C169D608351 /* OAuthSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OAuthSwift-prefix.pch"; sourceTree = "<group>"; };
+		925E2E1D1CC0F1FD934BC2D122332B85 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95B4E12AA05DC16427CFBB587D52C65F /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		99C2CB3318DD99DA4C5421B422DC7F56 /* OAuthSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OAuthSwift-dummy.m"; sourceTree = "<group>"; };
 		9BBC07E2DC334F6495153FCEC21BB825 /* Pods-OSMSwiftCombined-OSMSwift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OSMSwiftCombined-OSMSwift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9FE91A85FC4826EDAF408154083A29A6 /* OAuthSwiftAlamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OAuthSwiftAlamofire-dummy.m"; sourceTree = "<group>"; };
+		9D9C7FF14A8B54433DCD7E7ABC246EBA /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		9EDF14ECD1676EB5A0310AC27E9EE0D7 /* OverpassNode+AEXMLElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OverpassNode+AEXMLElement.swift"; path = "SwiftOverpass/Extensions/OverpassNode+AEXMLElement.swift"; sourceTree = "<group>"; };
 		A1D2AD8F431980333F1D17452EF81943 /* Permission.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
-		A2A00F78AD9D95CF748FFAD010E885F0 /* OAuthSwiftAlamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OAuthSwiftAlamofire.xcconfig; sourceTree = "<group>"; };
-		A3A31514B4B4684B8A9C5D9B0CB3E49E /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeychainAccess.framework; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5C8D9872E2EB407DF167114117BA418 /* Collection+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Collection+OAuthSwift.swift"; path = "Sources/Collection+OAuthSwift.swift"; sourceTree = "<group>"; };
-		A87BAAEF6E7825A326ABA058F10DC13C /* DownQuery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DownQuery.swift; path = SwiftOverpass/DownQuery.swift; sourceTree = "<group>"; };
+		A3A31514B4B4684B8A9C5D9B0CB3E49E /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7DA53B95B3BA9A2A822E54B72B5EEE3 /* NodeReferable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NodeReferable.swift; path = SwiftOverpass/Queries/Mixins/NodeReferable.swift; sourceTree = "<group>"; };
+		A8418B8F1534603155B36ACC0A662E9E /* RelationQuery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RelationQuery.swift; path = SwiftOverpass/Queries/RelationQuery.swift; sourceTree = "<group>"; };
+		A93F35774D68127FF94AEDC00AB896C7 /* String+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+OAuthSwift.swift"; path = "Sources/String+OAuthSwift.swift"; sourceTree = "<group>"; };
 		AA89582D8E8EBF13881A008998D64C7D /* OSMSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OSMSwift-dummy.m"; sourceTree = "<group>"; };
+		AACC1E28D157F9F76719B2B0B26301D1 /* OAuthSwiftError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftError.swift; path = Sources/OAuthSwiftError.swift; sourceTree = "<group>"; };
 		AC2739742371FFCB544176FCDD1F32BF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD8378DD4705CDD337E098CE12D23A2A /* Objc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Objc.swift; path = Sources/Objc.swift; sourceTree = "<group>"; };
-		B0EF47E395BDE94958DED529D0E499FB /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
-		B2F1D47A6DD413CF3206FC11ED782A89 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B892A47FB35CF2C86684878AD3505CFC /* KeychainAccess.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeychainAccess.xcconfig; sourceTree = "<group>"; };
-		B9AC03C595C2A0C817E0A001C4F44F12 /* String+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+OAuthSwift.swift"; path = "Sources/String+OAuthSwift.swift"; sourceTree = "<group>"; };
-		C022FCAC04D15C1DFA052377039DBF45 /* SwiftOverpass-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftOverpass-prefix.pch"; sourceTree = "<group>"; };
+		AE918E09579140B516CDE913D943A101 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		B06A97150BCE454DAD16930C43A85BBE /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		B08677D575AFC8F301402D39555025A6 /* OverpassElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverpassElement.swift; path = SwiftOverpass/Models/Elements/OverpassElement.swift; sourceTree = "<group>"; };
+		B32ED60FB21FAFEFD78DB156A6F4732E /* OverpassEntity+AEXMLElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OverpassEntity+AEXMLElement.swift"; path = "SwiftOverpass/Extensions/OverpassEntity+AEXMLElement.swift"; sourceTree = "<group>"; };
+		B3CF27470FA1FBB4966E3CD6F6DD8728 /* NotificationCenter+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NotificationCenter+OAuthSwift.swift"; path = "Sources/NotificationCenter+OAuthSwift.swift"; sourceTree = "<group>"; };
+		B84F69BBC2C2D14967E2F0E6EFFB17D0 /* OAuthSwiftURLHandlerType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftURLHandlerType.swift; path = Sources/OAuthSwiftURLHandlerType.swift; sourceTree = "<group>"; };
+		BA8D085758198D43FD869B053908A6CE /* SwiftOverpass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftOverpass.h; path = SwiftOverpass/SwiftOverpass.h; sourceTree = "<group>"; };
+		BB4C476D548F09A391760644B6E4FFC0 /* OAuthSwiftRequestAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftRequestAdapter.swift; path = Sources/OAuthSwiftRequestAdapter.swift; sourceTree = "<group>"; };
+		BBAA11636FEA5904E335D4D33D6A075E /* OverpassQuery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverpassQuery.swift; path = SwiftOverpass/Queries/OverpassQuery.swift; sourceTree = "<group>"; };
 		C0A9AD6F77FEA99FEF01FC52E407F7B3 /* SwiftOverpass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftOverpass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1125CFF358146AD64B4F22BAC2ECEAB /* Pods-OSMSwiftCombined-OSMSwift_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OSMSwiftCombined-OSMSwift_Example-resources.sh"; sourceTree = "<group>"; };
-		C1FDB77EBF63E3B952DA1B1CA38CA191 /* WayQuery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WayQuery.swift; path = SwiftOverpass/WayQuery.swift; sourceTree = "<group>"; };
+		C13C5783B75534A1CA6574DE3528FAA9 /* KeychainAccess-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeychainAccess-dummy.m"; sourceTree = "<group>"; };
 		C5CABDF37492F6DC14FA32FB49C11568 /* Pods-OSMSwiftCombined-OSMSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OSMSwiftCombined-OSMSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		C7A90B79148A8E1C3FAE4319DB86343B /* AEXML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AEXML-prefix.pch"; sourceTree = "<group>"; };
-		CCB5418DA5421A7451082EE4D7A104C6 /* SwiftOverpass-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftOverpass-umbrella.h"; sourceTree = "<group>"; };
+		C9E8F6F9CAAFA7042DC255D047108360 /* OAuth2Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Swift.swift; path = Sources/OAuth2Swift.swift; sourceTree = "<group>"; };
+		CBD1D57E38CEC9D9172F68875468BDDB /* OAuthSwiftClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftClient.swift; path = Sources/OAuthSwiftClient.swift; sourceTree = "<group>"; };
+		CD4ED76A5FA6F16CDF2DE84F50F5B996 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
 		CD5A903D7184A95384C976A4AF6C6073 /* Pods-OSMSwiftCombined-OSMSwift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OSMSwiftCombined-OSMSwift_Tests.modulemap"; sourceTree = "<group>"; };
-		CD740343B6A0AF398A9BB28D960E1889 /* AEXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AEXML.framework; path = AEXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDA1B107C29583CF57D6757B15E2C8AA /* SwiftOverpass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftOverpass.h; path = SwiftOverpass/SwiftOverpass.h; sourceTree = "<group>"; };
-		CFF04F9080878C8AD186E8AD2F48981A /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		D073FA085ABA01A00C1F233EDED05C10 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		CD740343B6A0AF398A9BB28D960E1889 /* AEXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AEXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D504F0102B59FEA71561568D7B9FDA /* Pods-OSMSwiftCombined-OSMSwift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OSMSwiftCombined-OSMSwift_Example.modulemap"; sourceTree = "<group>"; };
-		D0FC4CC303DEF80ACEF28A63A11F2D89 /* Options.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Options.swift; path = Sources/Options.swift; sourceTree = "<group>"; };
 		D1F0A3082A1792EA451C056051169C74 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D2A5E4A731D0F649C846FA7C61C469D6 /* Document.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Document.swift; path = Sources/Document.swift; sourceTree = "<group>"; };
 		D33A49FCD358C8DEF119EF488146D4FF /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D512926FD21545060B559003B21961F8 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Sources/Error.swift; sourceTree = "<group>"; };
-		D5B196399A27E2025DAFEE3D244D11D3 /* OAuth1Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth1Swift.swift; path = Sources/OAuth1Swift.swift; sourceTree = "<group>"; };
-		D5EEE25FC7CC24E61255F8A76C96C457 /* OAuthSwiftURLHandlerType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftURLHandlerType.swift; path = Sources/OAuthSwiftURLHandlerType.swift; sourceTree = "<group>"; };
-		D85487B99B4DD03779F891FBC6998D88 /* Element.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Element.swift; path = Sources/Element.swift; sourceTree = "<group>"; };
+		D351A4895C1F4F7206F355D13DBF3FD5 /* KeychainAccess.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeychainAccess.modulemap; sourceTree = "<group>"; };
+		D3A600B071ADC4ABAC4FA46C44D11DC7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D55D924249E2BDBECC8433199A995C34 /* OverpassWay+AEXMLElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OverpassWay+AEXMLElement.swift"; path = "SwiftOverpass/Extensions/OverpassWay+AEXMLElement.swift"; sourceTree = "<group>"; };
+		D6BAA721F6A252B6E47C40B35F6B5C9A /* Options.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Options.swift; path = Sources/Options.swift; sourceTree = "<group>"; };
+		D780918091BDC8BDF63D4586C2DE94CF /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
 		D8D49645CD76D57FB7ECE51888470D3C /* OSMSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OSMSwift.modulemap; sourceTree = "<group>"; };
-		DAAA2602512B984AE0B2C6D18D623B70 /* KeychainAccess-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainAccess-umbrella.h"; sourceTree = "<group>"; };
+		D9E0EA7F4C3C1EC9C8D639EB684C0069 /* AEXML.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AEXML.xcconfig; sourceTree = "<group>"; };
 		DC0B9EC0CE3E31C2864BC41230FB7F4D /* OAuthHandling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OAuthHandling.swift; sourceTree = "<group>"; };
-		DE4EFDE74D68F357AF5803C49C035C67 /* OverpassNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverpassNode.swift; path = SwiftOverpass/OverpassNode.swift; sourceTree = "<group>"; };
-		DEA85ACF22D3074759ADB05C9AD7DA95 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		DF3AEFF47BADBFCE82EAD913F9E41256 /* HTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = Sources/HTTPMethod.swift; sourceTree = "<group>"; };
+		DC31DF316E957D318A59086808A9A036 /* SwiftOverpass-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftOverpass-umbrella.h"; sourceTree = "<group>"; };
+		DD9F7894B5AD937B19793DC91D710756 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Sources/Error.swift; sourceTree = "<group>"; };
+		DEA43F65E10A87E9C6CC07B25FDC85C1 /* OAuthSwiftAlamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OAuthSwiftAlamofire-prefix.pch"; sourceTree = "<group>"; };
+		DF29288967F6E2E749E1A47CD1076656 /* OAuthWebViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthWebViewController.swift; path = Sources/OAuthWebViewController.swift; sourceTree = "<group>"; };
 		E0334379ABC07D774022F0D1EE7E16DD /* APIClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		E146E07318603607E198F3CD8AC56A09 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		E258346CD162ED8F1F5B7AB325106C0C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		E3206EFC0F787D6ED078E67E5BFDBA71 /* OAuthSwiftAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OAuthSwiftAlamofire.framework; path = OAuthSwiftAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E365793F0FC1A7CBD9AF8FDD76B41CA1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7F94DD7D576FD3E10C6783B6A3F70FB /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
-		ED4580FBAFBA856E3C953426DC68FA10 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E046EF51DF77B2F6256C9CE0CF8F9BAE /* OAuthSwiftAlamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OAuthSwiftAlamofire-umbrella.h"; sourceTree = "<group>"; };
+		E0CF24B08BF7F14838118BA05F0CA695 /* OverpassRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverpassRelation.swift; path = SwiftOverpass/Models/Elements/OverpassRelation.swift; sourceTree = "<group>"; };
+		E1B8686B3B34FC422113B55F5B708A36 /* KeychainAccess.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeychainAccess.xcconfig; sourceTree = "<group>"; };
+		E224378E2F7D9695874582CC4FBECF5A /* OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwift.swift; path = Sources/OAuthSwift.swift; sourceTree = "<group>"; };
+		E258346CD162ED8F1F5B7AB325106C0C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E25A11B54F7AB7539008E240F6500D75 /* OverpassTag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverpassTag.swift; path = SwiftOverpass/Models/OverpassTag.swift; sourceTree = "<group>"; };
+		E26E01D0E4676F41B11EF61C24536884 /* WayQuery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WayQuery.swift; path = SwiftOverpass/Queries/WayQuery.swift; sourceTree = "<group>"; };
+		E3206EFC0F787D6ED078E67E5BFDBA71 /* OAuthSwiftAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OAuthSwiftAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5644BB66910BCC4D9946A3E6C65C374 /* AEXML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AEXML-prefix.pch"; sourceTree = "<group>"; };
+		E57FB334E0B5B3222BFDAAFBE2F5417D /* OAuthSwiftResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftResponse.swift; path = Sources/OAuthSwiftResponse.swift; sourceTree = "<group>"; };
+		E753994D8847A2FF27DFFD25DCAF52C9 /* OverpassElementType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverpassElementType.swift; path = SwiftOverpass/Models/OverpassElementType.swift; sourceTree = "<group>"; };
+		EAB682E3A4082D68A6C2BAF576C8ED4C /* OverpassNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverpassNode.swift; path = SwiftOverpass/Models/Elements/OverpassNode.swift; sourceTree = "<group>"; };
+		ED155E68041DE03C9D94CFA2046B853A /* Element.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Element.swift; path = Sources/Element.swift; sourceTree = "<group>"; };
+		EE2A3D0405E796D91A55E7D0E8996ED0 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		EED909C331CCDD4FFCF23D448377FDB1 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Sources/Utils.swift; sourceTree = "<group>"; };
 		F0476ABD14175B646236167A4ABC5DB0 /* Pods-OSMSwiftCombined-OSMSwift_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OSMSwiftCombined-OSMSwift_Tests-dummy.m"; sourceTree = "<group>"; };
 		F184E5DDBFA83D2D99A18311656E06C9 /* AlamofireHTTPRequestHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlamofireHTTPRequestHandler.swift; sourceTree = "<group>"; };
-		F439D04D60250B0442C3BDA8301360E6 /* OAuthSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OAuthSwift.framework; path = OAuthSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F49C5EC6720CF554794F9375B5269FD0 /* OAuthSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OAuthSwift-dummy.m"; sourceTree = "<group>"; };
+		F439D04D60250B0442C3BDA8301360E6 /* OAuthSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OAuthSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5450C2C9DD39281B40C28BF9D9AB67A /* Pods-OSMSwiftCombined-OSMSwift_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OSMSwiftCombined-OSMSwift_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		F92ED8755A18D4113F574A9A9D89292F /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
-		FAA61C9C12A255B0A09C58E64540E41E /* OAuthSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OAuthSwift-umbrella.h"; sourceTree = "<group>"; };
-		FAFB7E2E7CE2FA3BF2E6E99FFBA6BA5C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC4613F15990024697601B1DDC947501 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Sources/Utils.swift; sourceTree = "<group>"; };
+		F631A3F2CC168A2EC92396AA67EE629E /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		F704296C94D1C07962F342ACC21AD296 /* OAuthSwiftHTTPRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthSwiftHTTPRequest.swift; path = Sources/OAuthSwiftHTTPRequest.swift; sourceTree = "<group>"; };
+		FA3B1A29220EED4C73CB7E267DAC57CD /* OAuthSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OAuthSwift.xcconfig; sourceTree = "<group>"; };
+		FB0810FFBB099C6AE9A0A743CB3A8C88 /* Document.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Document.swift; path = Sources/Document.swift; sourceTree = "<group>"; };
+		FBA3C02873101E66195807028BDE3D83 /* QueryBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QueryBuilder.swift; path = SwiftOverpass/Queries/QueryBuilder.swift; sourceTree = "<group>"; };
+		FD82482EB3A650272EB3F0320490F2F3 /* OAuthSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OAuthSwift.modulemap; sourceTree = "<group>"; };
+		FD9E9F7C78EEC83D39DD643276D2361F /* OAuthSwiftAlamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OAuthSwiftAlamofire.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -534,12 +556,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AD023C0902755F938BD944C884137D5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				95B4E12AA05DC16427CFBB587D52C65F /* Alamofire.modulemap */,
+				207510645B179377F094B1604D9F5B93 /* Alamofire.xcconfig */,
+				4E840F970C06AE8520C5CF3D5253F3CE /* Alamofire-dummy.m */,
+				4CA80AD3DB9C54F6FA1664BF9CCBC176 /* Alamofire-prefix.pch */,
+				AE918E09579140B516CDE913D943A101 /* Alamofire-umbrella.h */,
+				7E9C157A891066531E75A05096A0E433 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		0B0F795A1BD9852ECD7019C91C94CD3E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				925E2E1D1CC0F1FD934BC2D122332B85 /* Info.plist */,
+				73B210951E3CDD545E049E325333CEA9 /* SwiftOverpass.modulemap */,
+				418A7E909F905CDA89662E659BCCFCDE /* SwiftOverpass.xcconfig */,
+				0E52632A76233D0B2EECC5C626DA24D2 /* SwiftOverpass-dummy.m */,
+				7B8A5DF758E9D6E4154E48CBF753857F /* SwiftOverpass-prefix.pch */,
+				DC31DF316E957D318A59086808A9A036 /* SwiftOverpass-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftOverpass";
+			sourceTree = "<group>";
+		};
 		0DC7FD1DBCFB0C91E7084007012D7824 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				D1F0A3082A1792EA451C056051169C74 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		107F33472BC93991C71C28137099BFD8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6C236F2117CCF89E70B99707E2094030 /* Info.plist */,
+				4C12E865FBA053CAA6D302D9CA148D16 /* OAuthSwiftAlamofire.modulemap */,
+				FD9E9F7C78EEC83D39DD643276D2361F /* OAuthSwiftAlamofire.xcconfig */,
+				6FC5760A0189276A1C69CAFB24BE44D8 /* OAuthSwiftAlamofire-dummy.m */,
+				DEA43F65E10A87E9C6CC07B25FDC85C1 /* OAuthSwiftAlamofire-prefix.pch */,
+				E046EF51DF77B2F6256C9CE0CF8F9BAE /* OAuthSwiftAlamofire-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/OAuthSwiftAlamofire";
 			sourceTree = "<group>";
 		};
 		175F785767D2FCADA28826F89FE537A3 /* Targets Support Files */ = {
@@ -549,46 +613,6 @@
 				BE6014E72D99332DF4D055D28BF820E5 /* Pods-OSMSwiftCombined-OSMSwift_Tests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		18D97FA945CC325389FFCE2C9A115CF8 /* Alamofire */ = {
-			isa = PBXGroup;
-			children = (
-				86EB9095625B27590651291662B0315D /* AFError.swift */,
-				E146E07318603607E198F3CD8AC56A09 /* Alamofire.swift */,
-				2B9A7ED54A3D08900241D100B5F02739 /* DispatchQueue+Alamofire.swift */,
-				B0EF47E395BDE94958DED529D0E499FB /* MultipartFormData.swift */,
-				D073FA085ABA01A00C1F233EDED05C10 /* NetworkReachabilityManager.swift */,
-				4ADFFBE3F08C4C611A4119BE753BA7D6 /* Notifications.swift */,
-				749667A490F565D5D059D78E150F44E0 /* ParameterEncoding.swift */,
-				3DD779ABE359E0A31E00098577A19F4C /* Request.swift */,
-				E7F94DD7D576FD3E10C6783B6A3F70FB /* Response.swift */,
-				CFF04F9080878C8AD186E8AD2F48981A /* ResponseSerialization.swift */,
-				F92ED8755A18D4113F574A9A9D89292F /* Result.swift */,
-				DEA85ACF22D3074759ADB05C9AD7DA95 /* ServerTrustPolicy.swift */,
-				69D0EE0D54CD304CC7FF38115E52A7FC /* SessionDelegate.swift */,
-				4CD9B369CE6879DDF9A3E64B41A94C7A /* SessionManager.swift */,
-				40858B0E37EE99F57B3C0DEB1DB1DD3C /* TaskDelegate.swift */,
-				853DF2E106ACE5C5056C43909C010E59 /* Timeline.swift */,
-				75C77C7CF1C05D1D41AC33B32C8BE5AD /* Validation.swift */,
-				298711F1847C2482C28964BFAF333D65 /* Support Files */,
-			);
-			name = Alamofire;
-			path = Alamofire;
-			sourceTree = "<group>";
-		};
-		298711F1847C2482C28964BFAF333D65 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				5CFB6998925AFB1AA8E1507BD00F5C58 /* Alamofire.modulemap */,
-				18E9E069CE6A36FEE9882EAD08934E81 /* Alamofire.xcconfig */,
-				3D9593CEBB44EB0FCA322A8A4EA0A80F /* Alamofire-dummy.m */,
-				5EF682DC007C920DD8FC8B86E162799F /* Alamofire-prefix.pch */,
-				05FF20145DE8CB7C4BCB952CD698A8DC /* Alamofire-umbrella.h */,
-				ED4580FBAFBA856E3C953426DC68FA10 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Alamofire";
 			sourceTree = "<group>";
 		};
 		2C4751A1D89C84441AA8D73C80AD5276 /* OSMSwift */ = {
@@ -606,34 +630,6 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		2CDD06118871C52160E80E6A8269D10C /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4616A978F4AC03E2E88F3EA6A82BD804 /* Info.plist */,
-				4B0E4262693D02558EC22A00D335DA63 /* KeychainAccess.modulemap */,
-				B892A47FB35CF2C86684878AD3505CFC /* KeychainAccess.xcconfig */,
-				4C37F56B57DC92370101316C69F6F5A9 /* KeychainAccess-dummy.m */,
-				512F8D2EA8D38DE71ABEC178203FDEC5 /* KeychainAccess-prefix.pch */,
-				DAAA2602512B984AE0B2C6D18D623B70 /* KeychainAccess-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/KeychainAccess";
-			sourceTree = "<group>";
-		};
-		2F0F84F066E0D171110BEDB76B8D6324 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				63E8F64767114118EFA9F54E95C787A2 /* Info.plist */,
-				6BED0EA2D42147003003233C3E60885F /* OAuthSwiftAlamofire.modulemap */,
-				A2A00F78AD9D95CF748FFAD010E885F0 /* OAuthSwiftAlamofire.xcconfig */,
-				9FE91A85FC4826EDAF408154083A29A6 /* OAuthSwiftAlamofire-dummy.m */,
-				7C215E9A7F009898D021D3C9D74CF17D /* OAuthSwiftAlamofire-prefix.pch */,
-				0D72A3D26AA42DAB86A2935745A3CC88 /* OAuthSwiftAlamofire-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/OAuthSwiftAlamofire";
-			sourceTree = "<group>";
-		};
 		3073DECCCE53E07264921FCBD85D5945 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -648,51 +644,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3074A7FC43AD47D6DB186BB00796769C /* AEXML */ = {
+		4EE4E4C5CCD9D1093B9A04EAC21F20F5 /* AEXML */ = {
 			isa = PBXGroup;
 			children = (
-				D2A5E4A731D0F649C846FA7C61C469D6 /* Document.swift */,
-				D85487B99B4DD03779F891FBC6998D88 /* Element.swift */,
-				D512926FD21545060B559003B21961F8 /* Error.swift */,
-				D0FC4CC303DEF80ACEF28A63A11F2D89 /* Options.swift */,
-				790E6DFC448F4619918CDB79EFF833C5 /* Parser.swift */,
-				A7F170E5F893B3DF28C07E3FF1DA7B0F /* Support Files */,
+				FB0810FFBB099C6AE9A0A743CB3A8C88 /* Document.swift */,
+				ED155E68041DE03C9D94CFA2046B853A /* Element.swift */,
+				DD9F7894B5AD937B19793DC91D710756 /* Error.swift */,
+				D6BAA721F6A252B6E47C40B35F6B5C9A /* Options.swift */,
+				1D33B8ED89FE86F7C2229663B09EB09D /* Parser.swift */,
+				763EF738D74BB37D4B235A9F8C90D221 /* Support Files */,
 			);
-			name = AEXML;
 			path = AEXML;
-			sourceTree = "<group>";
-		};
-		57C4BABA031DE08C180BA861EE04667F /* OAuthSwift */ = {
-			isa = PBXGroup;
-			children = (
-				A5C8D9872E2EB407DF167114117BA418 /* Collection+OAuthSwift.swift */,
-				5B115BF39756A63C4FDE3270CA1442F7 /* Data+OAuthSwift.swift */,
-				7CA591D4F9B6215AE2E56BF6A5C0F5DB /* Dictionary+OAuthSwift.swift */,
-				917C9AD845657110F892E64C223CCCB3 /* HMAC.swift */,
-				6AF65FE90334C37DF2DFF86C93E722B9 /* Int+OAuthSwift.swift */,
-				89DA3C0B9E21EF043B7FC9B6496CB765 /* NotificationCenter+OAuthSwift.swift */,
-				40DEF3379B69B47C1A4197D367AB9480 /* NSError+OAuthSwift.swift */,
-				D5B196399A27E2025DAFEE3D244D11D3 /* OAuth1Swift.swift */,
-				874B8C83E4695A21E434DC264231F66D /* OAuth2Swift.swift */,
-				173BC81851FB40664747290335A95553 /* OAuthSwift.swift */,
-				32E00933519E295790A72D0D8395A8C9 /* OAuthSwiftClient.swift */,
-				5B53438514B1858606F73EC4F0573E72 /* OAuthSwiftCredential.swift */,
-				7F4B3ED0B5E18C42DF5DB716B13D5BC5 /* OAuthSwiftError.swift */,
-				5B7FF157C1AECFE3E5DE318022D2391C /* OAuthSwiftHTTPRequest.swift */,
-				6438A2FE75B09AE85C8BB9CED1A316F4 /* OAuthSwiftMultipartData.swift */,
-				2AAC5601A0C6F9EEBD50BE63F859203B /* OAuthSwiftResponse.swift */,
-				D5EEE25FC7CC24E61255F8A76C96C457 /* OAuthSwiftURLHandlerType.swift */,
-				21E85C80D27C41FAFC23F7FEC77D9B3B /* OAuthWebViewController.swift */,
-				AD8378DD4705CDD337E098CE12D23A2A /* Objc.swift */,
-				42632A50D55CB199E2CFDA8BCEC2C834 /* SHA1.swift */,
-				B9AC03C595C2A0C817E0A001C4F44F12 /* String+OAuthSwift.swift */,
-				5EBDDF61E9CC25DC35568E7F06B5317A /* UIApplication+OAuthSwift.swift */,
-				8F23DEA11D6CD6FB9FD3FF86A4055EAD /* URL+OAuthSwift.swift */,
-				FC4613F15990024697601B1DDC947501 /* Utils.swift */,
-				C2C12C8F249FB4787930001B4EF667C6 /* Support Files */,
-			);
-			name = OAuthSwift;
-			path = OAuthSwift;
 			sourceTree = "<group>";
 		};
 		5BC46794F4C99D92AE7A7433DB5F34AB /* Keychain */ = {
@@ -703,6 +665,20 @@
 			);
 			name = Keychain;
 			path = OSMSwift/Classes/Keychain;
+			sourceTree = "<group>";
+		};
+		5DC8B5750006A62CD80E307A9423A4C7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D3A600B071ADC4ABAC4FA46C44D11DC7 /* Info.plist */,
+				D351A4895C1F4F7206F355D13DBF3FD5 /* KeychainAccess.modulemap */,
+				E1B8686B3B34FC422113B55F5B708A36 /* KeychainAccess.xcconfig */,
+				C13C5783B75534A1CA6574DE3528FAA9 /* KeychainAccess-dummy.m */,
+				593E4FC8D1F2F1D6F8AF2BE762CC41A7 /* KeychainAccess-prefix.pch */,
+				77F7F98F3D04241B73902E1E4127622B /* KeychainAccess-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KeychainAccess";
 			sourceTree = "<group>";
 		};
 		70B1094236BB01C00BE28027B59BE316 /* Pods-OSMSwiftCombined-OSMSwift_Example */ = {
@@ -732,6 +708,20 @@
 			path = OSMSwift/Classes/Parsers;
 			sourceTree = "<group>";
 		};
+		763EF738D74BB37D4B235A9F8C90D221 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				367606F0018405A04B20CAEFE717B4DA /* AEXML.modulemap */,
+				D9E0EA7F4C3C1EC9C8D639EB684C0069 /* AEXML.xcconfig */,
+				178FDCE48F754C5DAD6BD0FB4678B650 /* AEXML-dummy.m */,
+				E5644BB66910BCC4D9946A3E6C65C374 /* AEXML-prefix.pch */,
+				83A600C120A573F7F64897FDB1B95E99 /* AEXML-umbrella.h */,
+				86F5D3979661074CBE08D335FE5ACDED /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AEXML";
+			sourceTree = "<group>";
+		};
 		78EC1019B85250D820604F8FF2FB9CF2 /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
@@ -748,10 +738,43 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				EF30979992A1D4C4BBBE4F4D06BB80F1 /* Development Pods */,
 				3073DECCCE53E07264921FCBD85D5945 /* Frameworks */,
-				AD34E18C844B3FC2BA3EBA6ED2A731AA /* Pods */,
+				B80925A3B12E1B7E5D7D8407410EA4B5 /* Pods */,
 				ED136DC06E7F00023AE03108153E5E80 /* Products */,
 				175F785767D2FCADA28826F89FE537A3 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8D45491E548A99485AA93B555AD2090F /* SwiftOverpass */ = {
+			isa = PBXGroup;
+			children = (
+				8BC54C6797EDB4E71C0058ECCED07DC6 /* BoudingBox.swift */,
+				4713C01301A1430FE0B932E75F9667E5 /* NodeQuery.swift */,
+				A7DA53B95B3BA9A2A822E54B72B5EEE3 /* NodeReferable.swift */,
+				B08677D575AFC8F301402D39555025A6 /* OverpassElement.swift */,
+				E753994D8847A2FF27DFFD25DCAF52C9 /* OverpassElementType.swift */,
+				B32ED60FB21FAFEFD78DB156A6F4732E /* OverpassEntity+AEXMLElement.swift */,
+				EAB682E3A4082D68A6C2BAF576C8ED4C /* OverpassNode.swift */,
+				9EDF14ECD1676EB5A0310AC27E9EE0D7 /* OverpassNode+AEXMLElement.swift */,
+				BBAA11636FEA5904E335D4D33D6A075E /* OverpassQuery.swift */,
+				E0CF24B08BF7F14838118BA05F0CA695 /* OverpassRelation.swift */,
+				337D58361F3F3ECC124F794070CEFBA2 /* OverpassRelation+AEXMLElement.swift */,
+				712CD45A28EAC1FA4D6588A05C0F8EA6 /* OverpassResponse.swift */,
+				0BDC88A24BB39FD878A5360600DB4C75 /* OverpassResponseElementsProviding.swift */,
+				E25A11B54F7AB7539008E240F6500D75 /* OverpassTag.swift */,
+				433E954039EDA25C5B4EC4802EC7E447 /* OverpassTag+AEXMLElement.swift */,
+				081A34F0C0C73FC6E0200CA18F7DBA23 /* OverpassWay.swift */,
+				D55D924249E2BDBECC8433199A995C34 /* OverpassWay+AEXMLElement.swift */,
+				FBA3C02873101E66195807028BDE3D83 /* QueryBuilder.swift */,
+				A8418B8F1534603155B36ACC0A662E9E /* RelationQuery.swift */,
+				48319E0EFB0BCD680F11A512EF6195F0 /* RelationReferable.swift */,
+				BA8D085758198D43FD869B053908A6CE /* SwiftOverpass.h */,
+				49678F53FEEB102DEBBB9FEF8CB78174 /* SwiftOverpass.swift */,
+				E26E01D0E4676F41B11EF61C24536884 /* WayQuery.swift */,
+				12E8CAA64EAF3BBB52F570EAF348531E /* WayReferable.swift */,
+				0CBE93EA934A4E09C9563E137A56DB71 /* XMLQueryBuilder.swift */,
+				0B0F795A1BD9852ECD7019C91C94CD3E /* Support Files */,
+			);
+			path = SwiftOverpass;
 			sourceTree = "<group>";
 		};
 		909D91A0EC2C1766DD27AFD9DE642D36 /* HTTP */ = {
@@ -762,6 +785,31 @@
 			);
 			name = HTTP;
 			path = OSMSwift/Classes/HTTP;
+			sourceTree = "<group>";
+		};
+		9EF0E807603A0415C29C799409447DB0 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				822109C285027E7EFCBE71B5BD9312D3 /* AFError.swift */,
+				6B69F5DE861CEDC61060E7DA6135C855 /* Alamofire.swift */,
+				180C1462EBE707EAA30908134144CE88 /* DispatchQueue+Alamofire.swift */,
+				B06A97150BCE454DAD16930C43A85BBE /* MultipartFormData.swift */,
+				66139556DAFD87311252D9A0897B8BE2 /* NetworkReachabilityManager.swift */,
+				5850A85CB198142DA079A837882F85D8 /* Notifications.swift */,
+				3B57107F7D9A6BDC0DA3DEE532BE6407 /* ParameterEncoding.swift */,
+				F631A3F2CC168A2EC92396AA67EE629E /* Request.swift */,
+				2731DFAF72C4EBA0FF0076A94AD504D5 /* Response.swift */,
+				9D9C7FF14A8B54433DCD7E7ABC246EBA /* ResponseSerialization.swift */,
+				CD4ED76A5FA6F16CDF2DE84F50F5B996 /* Result.swift */,
+				EE2A3D0405E796D91A55E7D0E8996ED0 /* ServerTrustPolicy.swift */,
+				224E8CF557D5C80EB9E74F7A966EB1E7 /* SessionDelegate.swift */,
+				D780918091BDC8BDF63D4586C2DE94CF /* SessionManager.swift */,
+				4E1A9D6599EAD7B3629586E3AEB17F53 /* TaskDelegate.swift */,
+				48F3779C3535825B4CEC2B23925BC6A7 /* Timeline.swift */,
+				4D6264B8D0E980D99DF05AF4F203ABBD /* Validation.swift */,
+				0AD023C0902755F938BD944C884137D5 /* Support Files */,
+			);
+			path = Alamofire;
 			sourceTree = "<group>";
 		};
 		A022D9FEA2CC5ECDEEA46CA425C17E21 /* Support Files */ = {
@@ -778,64 +826,18 @@
 			path = "Example/Pods/Target Support Files/OSMSwift";
 			sourceTree = "<group>";
 		};
-		A5FE4048BFFB3D4DD2BB045F965CF34E /* SwiftOverpass */ = {
+		A49E9A912D2C2827F5D625E60BA1377E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6759B21A0158A5CCEBD910DD5F841E9D /* BoudingBox.swift */,
-				A87BAAEF6E7825A326ABA058F10DC13C /* DownQuery.swift */,
-				098C0659E8C6D99FD288A982C5525822 /* NodeQuery.swift */,
-				DE4EFDE74D68F357AF5803C49C035C67 /* OverpassNode.swift */,
-				2DC86729B8CA075F953B62B7C8A32971 /* OverpassQuery.swift */,
-				65F437B4D2BAE3D29446C2EE4CFDEB18 /* OverpassRelation.swift */,
-				34CCA625EA05575CA64ABB5A91CAD7D4 /* OverpassResponse.swift */,
-				93059BF08373A3FD4391C421998EEB93 /* OverpassTag.swift */,
-				39F8E49556F54344E5C902E4BA3BA8B6 /* OverpassWay.swift */,
-				5D5CFFD23FF1BA74F2FD81EE72D924A4 /* RelationQuery.swift */,
-				CDA1B107C29583CF57D6757B15E2C8AA /* SwiftOverpass.h */,
-				872EFAB4A4D8D8BD9450B9F60F542811 /* SwiftOverpass.swift */,
-				9A138BDD3405475B8BC90357C2E6583E /* UpQuery.swift */,
-				C1FDB77EBF63E3B952DA1B1CA38CA191 /* WayQuery.swift */,
-				C33B1A48DADF23A59A524BD7664B3837 /* Support Files */,
-			);
-			name = SwiftOverpass;
-			path = SwiftOverpass;
-			sourceTree = "<group>";
-		};
-		A7F170E5F893B3DF28C07E3FF1DA7B0F /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				79DE41AB144666A0B76D74D41F6566E9 /* AEXML.modulemap */,
-				064A19790401BD60121CC70656E172FF /* AEXML.xcconfig */,
-				333189683EF76A5AC491BC9915A3A902 /* AEXML-dummy.m */,
-				C7A90B79148A8E1C3FAE4319DB86343B /* AEXML-prefix.pch */,
-				1A11EE4844E043655BCBFDCDF72AD405 /* AEXML-umbrella.h */,
-				E365793F0FC1A7CBD9AF8FDD76B41CA1 /* Info.plist */,
+				47323B56C1285856E37CC75040FC9B28 /* Info.plist */,
+				FD82482EB3A650272EB3F0320490F2F3 /* OAuthSwift.modulemap */,
+				FA3B1A29220EED4C73CB7E267DAC57CD /* OAuthSwift.xcconfig */,
+				99C2CB3318DD99DA4C5421B422DC7F56 /* OAuthSwift-dummy.m */,
+				66045A1E6790C5E8AC1992EA512435EC /* OAuthSwift-prefix.pch */,
+				0CBFC14A378C8BB644D3D5D0EABBF912 /* OAuthSwift-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/AEXML";
-			sourceTree = "<group>";
-		};
-		AC7920965EF36BAFD5414FC325AA0E33 /* KeychainAccess */ = {
-			isa = PBXGroup;
-			children = (
-				34790DCA36B368BB7BDD9781349DB5F4 /* Keychain.swift */,
-				2CDD06118871C52160E80E6A8269D10C /* Support Files */,
-			);
-			name = KeychainAccess;
-			path = KeychainAccess;
-			sourceTree = "<group>";
-		};
-		AD34E18C844B3FC2BA3EBA6ED2A731AA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3074A7FC43AD47D6DB186BB00796769C /* AEXML */,
-				18D97FA945CC325389FFCE2C9A115CF8 /* Alamofire */,
-				AC7920965EF36BAFD5414FC325AA0E33 /* KeychainAccess */,
-				57C4BABA031DE08C180BA861EE04667F /* OAuthSwift */,
-				E7EA0D9D05E6EAC78ED371C6551ECFDC /* OAuthSwiftAlamofire */,
-				A5FE4048BFFB3D4DD2BB045F965CF34E /* SwiftOverpass */,
-			);
-			name = Pods;
+			path = "../Target Support Files/OAuthSwift";
 			sourceTree = "<group>";
 		};
 		AEAECCAE62127C55C95019E0B9C7C7AC /* Pod */ = {
@@ -846,6 +848,51 @@
 				E258346CD162ED8F1F5B7AB325106C0C /* README.md */,
 			);
 			name = Pod;
+			sourceTree = "<group>";
+		};
+		B80925A3B12E1B7E5D7D8407410EA4B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4EE4E4C5CCD9D1093B9A04EAC21F20F5 /* AEXML */,
+				9EF0E807603A0415C29C799409447DB0 /* Alamofire */,
+				F6035B4C21B42C7C603A5E58FEE148F2 /* KeychainAccess */,
+				BCE1007DD2880C0D52F03049ED63A51C /* OAuthSwift */,
+				FB621D888C9D2C9D04034CF87F0CC979 /* OAuthSwiftAlamofire */,
+				8D45491E548A99485AA93B555AD2090F /* SwiftOverpass */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BCE1007DD2880C0D52F03049ED63A51C /* OAuthSwift */ = {
+			isa = PBXGroup;
+			children = (
+				825E150782E76957421AA11E6EF69A17 /* Collection+OAuthSwift.swift */,
+				2B43DC8D9F8BE9A87AE39608FCF061DC /* Data+OAuthSwift.swift */,
+				63B19BDFD1B0CCA51FACC21AD2534E53 /* Dictionary+OAuthSwift.swift */,
+				38A56AE36C21BC085B0A9EDC3D1E0B77 /* HMAC.swift */,
+				7DF68D9DFEB7C2B4BD08A39FC041E0CE /* Int+OAuthSwift.swift */,
+				B3CF27470FA1FBB4966E3CD6F6DD8728 /* NotificationCenter+OAuthSwift.swift */,
+				0E4EA3A22D6A43EB7BBCFF2B1B13138D /* NSError+OAuthSwift.swift */,
+				8DC3C65AEF87E2D5498623050D156F02 /* OAuth1Swift.swift */,
+				C9E8F6F9CAAFA7042DC255D047108360 /* OAuth2Swift.swift */,
+				E224378E2F7D9695874582CC4FBECF5A /* OAuthSwift.swift */,
+				CBD1D57E38CEC9D9172F68875468BDDB /* OAuthSwiftClient.swift */,
+				8E20E2488054976D6196A09AD74BABC1 /* OAuthSwiftCredential.swift */,
+				AACC1E28D157F9F76719B2B0B26301D1 /* OAuthSwiftError.swift */,
+				F704296C94D1C07962F342ACC21AD296 /* OAuthSwiftHTTPRequest.swift */,
+				01F6EBE3890C2258AF2DEBF2A29BDB5B /* OAuthSwiftMultipartData.swift */,
+				E57FB334E0B5B3222BFDAAFBE2F5417D /* OAuthSwiftResponse.swift */,
+				B84F69BBC2C2D14967E2F0E6EFFB17D0 /* OAuthSwiftURLHandlerType.swift */,
+				DF29288967F6E2E749E1A47CD1076656 /* OAuthWebViewController.swift */,
+				7DBA22212D6BDFEA0BB0067089BA9192 /* Objc.swift */,
+				4633A11E609D02E63DA75008BAF60EF5 /* SHA1.swift */,
+				A93F35774D68127FF94AEDC00AB896C7 /* String+OAuthSwift.swift */,
+				11C490AF691F07FD603AFC35882C6CAB /* UIApplication+OAuthSwift.swift */,
+				18C181E28B3EFDF3D21930AB5A139F88 /* URL+OAuthSwift.swift */,
+				EED909C331CCDD4FFCF23D448377FDB1 /* Utils.swift */,
+				A49E9A912D2C2827F5D625E60BA1377E /* Support Files */,
+			);
+			path = OAuthSwift;
 			sourceTree = "<group>";
 		};
 		BE6014E72D99332DF4D055D28BF820E5 /* Pods-OSMSwiftCombined-OSMSwift_Tests */ = {
@@ -866,34 +913,6 @@
 			path = "Target Support Files/Pods-OSMSwiftCombined-OSMSwift_Tests";
 			sourceTree = "<group>";
 		};
-		C2C12C8F249FB4787930001B4EF667C6 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FAFB7E2E7CE2FA3BF2E6E99FFBA6BA5C /* Info.plist */,
-				1B0B856101E9F74F08F8449007C82938 /* OAuthSwift.modulemap */,
-				091108893D81B0F2A9EB309FAA6752D2 /* OAuthSwift.xcconfig */,
-				F49C5EC6720CF554794F9375B5269FD0 /* OAuthSwift-dummy.m */,
-				9AB7D4A36C8BDE2E81376C169D608351 /* OAuthSwift-prefix.pch */,
-				FAA61C9C12A255B0A09C58E64540E41E /* OAuthSwift-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/OAuthSwift";
-			sourceTree = "<group>";
-		};
-		C33B1A48DADF23A59A524BD7664B3837 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B2F1D47A6DD413CF3206FC11ED782A89 /* Info.plist */,
-				66AF86955A7BA28BF4A09C4FAE313D53 /* SwiftOverpass.modulemap */,
-				58AD1551D18E6332DBFEF9AD7DAD9951 /* SwiftOverpass.xcconfig */,
-				058818665CE664A6D6BABB751B4D0772 /* SwiftOverpass-dummy.m */,
-				C022FCAC04D15C1DFA052377039DBF45 /* SwiftOverpass-prefix.pch */,
-				CCB5418DA5421A7451082EE4D7A104C6 /* SwiftOverpass-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftOverpass";
-			sourceTree = "<group>";
-		};
 		DA4A3854D4442142D62EE5204C01D8E9 /* Client */ = {
 			isa = PBXGroup;
 			children = (
@@ -903,17 +922,6 @@
 			);
 			name = Client;
 			path = OSMSwift/Classes/Client;
-			sourceTree = "<group>";
-		};
-		E7EA0D9D05E6EAC78ED371C6551ECFDC /* OAuthSwiftAlamofire */ = {
-			isa = PBXGroup;
-			children = (
-				DF3AEFF47BADBFCE82EAD913F9E41256 /* HTTPMethod.swift */,
-				55B7F53B8777D2B4605EF68C3C420CA2 /* OAuthSwiftRequestAdapter.swift */,
-				2F0F84F066E0D171110BEDB76B8D6324 /* Support Files */,
-			);
-			name = OAuthSwiftAlamofire;
-			path = OAuthSwiftAlamofire;
 			sourceTree = "<group>";
 		};
 		ED136DC06E7F00023AE03108153E5E80 /* Products */ = {
@@ -938,6 +946,25 @@
 				2C4751A1D89C84441AA8D73C80AD5276 /* OSMSwift */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		F6035B4C21B42C7C603A5E58FEE148F2 /* KeychainAccess */ = {
+			isa = PBXGroup;
+			children = (
+				68345AE0FFF4589CDF36C99076EF0647 /* Keychain.swift */,
+				5DC8B5750006A62CD80E307A9423A4C7 /* Support Files */,
+			);
+			path = KeychainAccess;
+			sourceTree = "<group>";
+		};
+		FB621D888C9D2C9D04034CF87F0CC979 /* OAuthSwiftAlamofire */ = {
+			isa = PBXGroup;
+			children = (
+				7056A2D6E1EF04967F6E99D7999BC850 /* HTTPMethod.swift */,
+				BB4C476D548F09A391760644B6E4FFC0 /* OAuthSwiftRequestAdapter.swift */,
+				107F33472BC93991C71C28137099BFD8 /* Support Files */,
+			);
+			path = OAuthSwiftAlamofire;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1134,7 +1161,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF7DD155F723E121AA47A712DD542A69 /* Build configuration list for PBXNativeTarget "SwiftOverpass" */;
 			buildPhases = (
-				76D24D3AA2A505CF4FF6671183156F85 /* Sources */,
+				D160853ADADDBFA59AA1E969B5284CDC /* Sources */,
 				A00970893674808B8146F7E05910013B /* Frameworks */,
 				EC6758BB0526602DA5DD1A4EA47B8AB5 /* Headers */,
 			);
@@ -1309,27 +1336,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		76D24D3AA2A505CF4FF6671183156F85 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4AE05BAA8438566CC4F412A092BD106 /* BoudingBox.swift in Sources */,
-				076645934C014F68B90FE027DD1F83D3 /* DownQuery.swift in Sources */,
-				B3DFC639E288B9B5D2F68A4BCF0CCDE1 /* NodeQuery.swift in Sources */,
-				81BC0371676862A4A9B44058BD6E5509 /* OverpassNode.swift in Sources */,
-				7063FD42D71F725453CEB6F40B131B72 /* OverpassQuery.swift in Sources */,
-				8E93D70260322CDB808445FF92430CD9 /* OverpassRelation.swift in Sources */,
-				76156F69F24C8F026D1E934708AAAE97 /* OverpassResponse.swift in Sources */,
-				F74E9C727CFAB7E0339D6291DB0AC496 /* OverpassTag.swift in Sources */,
-				E8DA6F03D35F08B6776150630BCA3458 /* OverpassWay.swift in Sources */,
-				96ED594F55D528F343A156CAECB43349 /* RelationQuery.swift in Sources */,
-				B644732B7578BD9C82304EEB98981C0F /* SwiftOverpass-dummy.m in Sources */,
-				3432B14E22B2B1EE4A1CF5C44D8DC51D /* SwiftOverpass.swift in Sources */,
-				9CC1409D0416537A432578A3FA064B2F /* UpQuery.swift in Sources */,
-				E0E573C57B1345C15E6C6ACEBEE1094D /* WayQuery.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9177D0FA39BFCD4159CCB40EACC46F14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1353,6 +1359,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				C05888C12C6E1A091E7C8BAB7098891E /* Pods-OSMSwiftCombined-OSMSwift_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D160853ADADDBFA59AA1E969B5284CDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDD837C00808F223643FD8B09061EDF1 /* BoudingBox.swift in Sources */,
+				062D6972856244DEAD77D5D211617F37 /* NodeQuery.swift in Sources */,
+				325041A7BA4D88DBD4126426D5F6BE02 /* NodeReferable.swift in Sources */,
+				BCAB7CB3A329AB87B601DD7E7C030407 /* OverpassElement.swift in Sources */,
+				8418F44C9DD2229E2137E44D1FBF28B6 /* OverpassElementType.swift in Sources */,
+				9AFCC3205B961EAF0D3A8CDBB62EAC10 /* OverpassEntity+AEXMLElement.swift in Sources */,
+				60B6687B8850E3E10EA346A9F4AE5A76 /* OverpassNode+AEXMLElement.swift in Sources */,
+				902AEB2F011C4C8DC80DB04252EE56BF /* OverpassNode.swift in Sources */,
+				D5ED71700FB7A15D08726A361AED9540 /* OverpassQuery.swift in Sources */,
+				3B6083D789422FC29E98E70F1560221E /* OverpassRelation+AEXMLElement.swift in Sources */,
+				4E0F1362B9998A73F355CB92FEEBCC50 /* OverpassRelation.swift in Sources */,
+				B292864876265C14AC6FA9DDFD5FCA38 /* OverpassResponse.swift in Sources */,
+				5CEA5E4997D75743F3D70A54418341A1 /* OverpassResponseElementsProviding.swift in Sources */,
+				FF75A23E006917EE5950CEA7264F035F /* OverpassTag+AEXMLElement.swift in Sources */,
+				55EAD51C8D5058940E5DA3C88500B491 /* OverpassTag.swift in Sources */,
+				D99C8AF42736D9BB6FE2E762FC4E12D9 /* OverpassWay+AEXMLElement.swift in Sources */,
+				60F2550452CE14B941945608CF17F5B5 /* OverpassWay.swift in Sources */,
+				4A4C68B13ECB8E3935480B723520620B /* QueryBuilder.swift in Sources */,
+				6851B4E7FD991E0A33F8BD1D83F98DF1 /* RelationQuery.swift in Sources */,
+				BED910A395CE367D4DB31E744F386212 /* RelationReferable.swift in Sources */,
+				123792579FF3BE659E714A9F5D4EDE0B /* SwiftOverpass-dummy.m in Sources */,
+				F815599DD6517A2A36110B3608910899 /* SwiftOverpass.swift in Sources */,
+				C3BB7DAC454B1CC9503D0500A8B24B16 /* WayQuery.swift in Sources */,
+				3564A6C0A33CDA839591AC746D5A1481 /* WayReferable.swift in Sources */,
+				036F377DC5DA0BADCD45D0DF3B6D45D5 /* XMLQueryBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1527,7 +1565,7 @@
 /* Begin XCBuildConfiguration section */
 		034E7C3E38365387D0A547FE40BD144B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58AD1551D18E6332DBFEF9AD7DAD9951 /* SwiftOverpass.xcconfig */;
+			baseConfigurationReference = 418A7E909F905CDA89662E659BCCFCDE /* SwiftOverpass.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1596,7 +1634,7 @@
 		};
 		296034C32072E81CA2058DA8231923C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 091108893D81B0F2A9EB309FAA6752D2 /* OAuthSwift.xcconfig */;
+			baseConfigurationReference = FA3B1A29220EED4C73CB7E267DAC57CD /* OAuthSwift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1628,7 +1666,7 @@
 		};
 		4EFEC4A9C205B9BCF1CDC297C7DD3E79 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 064A19790401BD60121CC70656E172FF /* AEXML.xcconfig */;
+			baseConfigurationReference = D9E0EA7F4C3C1EC9C8D639EB684C0069 /* AEXML.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1884,7 +1922,7 @@
 		};
 		75C87429AE641349B220F3DB0AF31916 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 091108893D81B0F2A9EB309FAA6752D2 /* OAuthSwift.xcconfig */;
+			baseConfigurationReference = FA3B1A29220EED4C73CB7E267DAC57CD /* OAuthSwift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1953,7 +1991,7 @@
 		};
 		80140B1EEC203F51D2378885C5117919 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B892A47FB35CF2C86684878AD3505CFC /* KeychainAccess.xcconfig */;
+			baseConfigurationReference = E1B8686B3B34FC422113B55F5B708A36 /* KeychainAccess.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1986,7 +2024,7 @@
 		};
 		809A62A00F8D203BD3AA943B48739ED9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2A00F78AD9D95CF748FFAD010E885F0 /* OAuthSwiftAlamofire.xcconfig */;
+			baseConfigurationReference = FD9E9F7C78EEC83D39DD643276D2361F /* OAuthSwiftAlamofire.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2019,7 +2057,7 @@
 		};
 		860F5D378A55495AA0FE4972E1C1E150 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 064A19790401BD60121CC70656E172FF /* AEXML.xcconfig */;
+			baseConfigurationReference = D9E0EA7F4C3C1EC9C8D639EB684C0069 /* AEXML.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2052,7 +2090,7 @@
 		};
 		A18C9CC7E37563F2891E7DC87F2DE6CE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 18E9E069CE6A36FEE9882EAD08934E81 /* Alamofire.xcconfig */;
+			baseConfigurationReference = 207510645B179377F094B1604D9F5B93 /* Alamofire.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2085,7 +2123,7 @@
 		};
 		A9E26F4D0BA9708A07BF1A0136E8CDD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B892A47FB35CF2C86684878AD3505CFC /* KeychainAccess.xcconfig */;
+			baseConfigurationReference = E1B8686B3B34FC422113B55F5B708A36 /* KeychainAccess.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2117,7 +2155,7 @@
 		};
 		E28824B323A3126C6EF558B1B756A341 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2A00F78AD9D95CF748FFAD010E885F0 /* OAuthSwiftAlamofire.xcconfig */;
+			baseConfigurationReference = FD9E9F7C78EEC83D39DD643276D2361F /* OAuthSwiftAlamofire.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2149,7 +2187,7 @@
 		};
 		EA0ADC75B20BB62958101306980460E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 18E9E069CE6A36FEE9882EAD08934E81 /* Alamofire.xcconfig */;
+			baseConfigurationReference = 207510645B179377F094B1604D9F5B93 /* Alamofire.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2217,7 +2255,7 @@
 		};
 		F9F46C3B98A651B3EE9E46D16DA312BF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58AD1551D18E6332DBFEF9AD7DAD9951 /* SwiftOverpass.xcconfig */;
+			baseConfigurationReference = 418A7E909F905CDA89662E659BCCFCDE /* SwiftOverpass.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";

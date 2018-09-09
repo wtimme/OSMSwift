@@ -1,8 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
 use_frameworks!
 
 platform :ios, '10.0'
 
 abstract_target 'OSMSwiftCombined' do
+    
+    # Remove this once a new version of SwiftOverpass has been released
+    pod 'SwiftOverpass', :git => 'https://github.com/holyturt/SwiftOverpassWrapper.git'
     
     pod 'OSMSwift', :path => '../'
     

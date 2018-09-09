@@ -8,32 +8,37 @@
 
 import Foundation
 
-public final class OverpassNode {
+/// An OpenStreetMap element that consists of a single point in space defined by its latitude, longitude and node id.
+/// See: https://wiki.openstreetmap.org/wiki/Node
+public final class OverpassNode: OverpassElement {
     
     // MARK: - Properties
     
-    /// The response which made the node
-    public fileprivate(set) weak var response: OverpassResponse?
-    /// List of tag the node has
-    public let tags :[String : String]
-    /// The id of the node
-    public let id: String
     /// The latitude of the node
     public let latitude: Double
     /// The longitude of the node
     public let longitude: Double
+    
+    /// An object that is used to look up related elements that were received with the same response.
+    private weak var responseElementProvider: OverpassResponseElementsProviding?
     
     // MARK: - Initializers
     
     /**
      Creates a `OverpassNode`
     */
-    internal init(id: String, lat: Double, lon: Double, tags: [String : String], response: OverpassResponse) {
-        self.id = id
+    public init(id: Int,
+                tags: [String : String],
+                meta: Meta?,
+                lat: Double,
+                lon: Double,
+                responseElementProvider: OverpassResponseElementsProviding?) {
+        
         self.latitude = lat
         self.longitude = lon
-        self.tags = tags
-        self.response = response
+        self.responseElementProvider = responseElementProvider
+        
+        super.init(id: id, tags: tags, meta: meta)
     }
     
     // MARK: Public
@@ -42,7 +47,7 @@ public final class OverpassNode {
      Returns ways that related to the node after load from response
     */
     public func loadRelatedWays() -> [OverpassWay]? {
-        if let response = response, let ways = response.ways {
+        if let ways = responseElementProvider?.ways {
             let filtered = ways.filter { $0.id == id }
             
             // Returns if it has some ways.
@@ -58,15 +63,13 @@ public final class OverpassNode {
      Returns another relations that related to the node after load from response
      */
     public func loadRelatedRelations() -> [OverpassRelation]? {
-        if let response = response, let allRels = response.relations {
+        if let allRels = responseElementProvider?.relations {
             var filtered = [OverpassRelation]()
             
             allRels.forEach { relation in
-                if let members = relation.members {
-                    members.forEach { member in
-                        if member.type == .node && member.id == self.id {
-                            filtered.append(relation)
-                        }
+                relation.members.forEach { member in
+                    if member.type == .node && member.id == self.id {
+                        filtered.append(relation)
                     }
                 }
             }

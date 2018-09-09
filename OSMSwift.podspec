@@ -29,5 +29,5 @@ The framework aims to allow for easy editing of OpenStreetMap data.
   s.dependency 'KeychainAccess', '~> 3.1.0'
   s.dependency 'AEXML', '~> 4.2.2'
   s.dependency 'OAuthSwiftAlamofire', '~> 0.2.0'
-  s.dependency 'SwiftOverpass'
+  s.dependency 'SwiftOverpass', '~> 2.0.0'
 end

@@ -10,105 +10,59 @@ import Foundation
 import Alamofire
 import AEXML
 
-public final class OverpassResponse {
-    
-    // MARK: - Properties
-    
-    /// List of output nodes
-    public fileprivate(set) var nodes: [OverpassNode]?
-    /// List of output ways
-    public fileprivate(set) var ways: [OverpassWay]?
-    /// List of output relations
-    public fileprivate(set) var relations: [OverpassRelation]?
-    /// The request query which was used to fetch from api
-    public let requestQuery: String
-    /// The xml string of output
-    public let xml: String
+public enum OverpassResponseError: Error {
+    case parsingFailed(query: String, xml: String, underlyingError: Error)
+}
+
+public final class OverpassResponse: OverpassResponseElementsProviding {
     
     // MARK: Initializers
+    
+    public init(xml: String, requestQuery: String) throws {
+        
+        let xmlDoc: AEXMLDocument
+        do {
+            xmlDoc = try AEXMLDocument(xml: xml)
+        } catch {
+            throw OverpassResponseError.parsingFailed(query: requestQuery,
+                                                      xml: xml,
+                                                      underlyingError: error)
+        }
+        
+        // Parses xml to create `OverpassNode`
+        if let nodes = xmlDoc.root["node"].all {
+            self.nodes = nodes.compactMap { nodeXMLElement in
+                return OverpassNode(xmlElement: nodeXMLElement, responseElementProvider: self)
+            }
+        }
+        
+        // Parses xml to create `OverpassWay`
+        if let ways = xmlDoc.root["way"].all {
+            self.ways = ways.compactMap { wayXMLElement in
+                return OverpassWay(xmlElement: wayXMLElement, responseElementProvider: self)
+            }
+        }
+        
+        // Parses xml to create `OverpassRelation`
+        if let rels = xmlDoc.root["relation"].all {
+            self.relations = rels.compactMap { relationXMLElement in
+                return OverpassRelation(xmlElement: relationXMLElement, responseElementProvider: self)
+            }
+        }
+    }
     
     /**
      Creates a `OverpassResponse`
     */
-    internal init(response: DataResponse<String>, requestQuery: String) {
-        self.requestQuery = requestQuery
+    internal convenience init(response: DataResponse<String>, requestQuery: String) throws {
+        let xml = String(data: response.data!, encoding: String.Encoding.utf8)!
         
-        do {
-            self.xml = String(data: response.data!, encoding: String.Encoding.utf8)!
-            let xmlDoc = try AEXMLDocument(xml: self.xml)
-            
-            // Parses xml to create `OverpassNode`
-            if let nodes = xmlDoc.root["node"].all {
-                self.nodes = nodes.map {
-                    let id = $0.attributes["id"]!
-                    let lat = Double($0.attributes["lat"]!)!
-                    let lon = Double($0.attributes["lon"]!)!
-                    
-                    let tags = getTags($0)
-                    
-                    return OverpassNode(id: id, lat: lat, lon: lon, tags: tags, response: self)
-                }
-            }
-            
-            // Parses xml to create `OverpassWay`
-            if let ways = xmlDoc.root["way"].all {
-                self.ways = ways.map {
-                    let id = $0.attributes["id"]!
-                    
-                    var nodeIds: [String]?
-                    if let nodes = $0["nd"].all {
-                        nodeIds = nodes.map { $0.attributes["ref"]! }
-                    }
-                    
-                    let tags = getTags($0)
-                    
-                    return OverpassWay(id: id, nodeIds: nodeIds, tags: tags, response: self)
-                }
-            }
-            
-            // Parses xml to create `OverpassRelation`
-            if let rels = xmlDoc.root["relation"].all {
-                self.relations = rels.map {
-                    let id = $0.attributes["id"]!
-                    
-                    var relMembers: [OverpassRelation.Member]?
-                    if let members = $0["member"].all {
-                        relMembers = members.map {
-                            var type: OverpassQueryType!
-                            switch $0.attributes["type"]! {
-                            case "node": type = .node
-                            case "way": type = .way
-                            case "relation": type = .relation
-                            default: break // TODO: shouldn't be reach here, throw error
-                            }
-                            
-                            let ref = $0.attributes["ref"]!
-                            let role = $0.attributes["role"]
-                            return OverpassRelation.Member(type: type, id: ref, role: role)
-                        }
-                    }
-                    
-                    let tags = getTags($0)
-                    
-                    return OverpassRelation(id: id, members: relMembers, tags: tags, response: self)
-                }
-            }
-        } catch {
-            print("\(error)")
-        }
+        try self.init(xml: xml, requestQuery: requestQuery)
     }
     
-    // MARK: - Private
+    // MARK: OverpassResponseElementsProviding
     
-    private func getTags(_ element: AEXMLElement) -> [String : String] {
-        var tags = [String : String]()
-        if let tagElems = element["tag"].all {
-            tagElems.forEach {
-                if let k = $0.attributes["k"], let v = $0.attributes["v"] {
-                    tags[k] = v
-                }
-            }
-        }
-        return tags
-    }
+    public private(set) var nodes: [OverpassNode]?
+    public private(set) var ways: [OverpassWay]?
+    public private(set) var relations: [OverpassRelation]?
 }

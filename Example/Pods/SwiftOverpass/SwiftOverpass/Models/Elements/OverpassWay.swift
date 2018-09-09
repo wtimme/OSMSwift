@@ -8,29 +8,32 @@
 
 import Foundation
 
-public final class OverpassWay {
+/// An ordered list of nodes which normally also has at least one tag or is included within a `OverpassRelation`.
+/// See: https://wiki.openstreetmap.org/wiki/Way
+public final class OverpassWay: OverpassElement {
     
     // MARK: - Properties
     
-    /// The response which made the way
-    public fileprivate(set) weak var response: OverpassResponse?
-    /// The id of the way
-    public let id: String
     /// List of id of the nodes which belong to the way
-    public let nodeIds: [String]?
-    /// List of tag the node has
-    public let tags: [String : String]
+    public let nodeIds: [Int]
+    
+    /// An object that is used to look up related elements that were received with the same response.
+    private weak var responseElementProvider: OverpassResponseElementsProviding?
     
     // MARK: - Initializers
     
     /**
      Creates a `OverpassWay`
     */
-    internal init(id: String, nodeIds: [String]?, tags: [String : String], response: OverpassResponse) {
-        self.id = id
+    public init(id: Int,
+                  tags: [String : String],
+                  meta: Meta?,
+                  nodeIds: [Int] = [],
+                  responseElementProvider: OverpassResponseElementsProviding?) {
         self.nodeIds = nodeIds
-        self.tags = tags
-        self.response = response
+        self.responseElementProvider = responseElementProvider
+        
+        super.init(id: id, tags: tags, meta: meta)
     }
     
     // MARK: - Public
@@ -39,10 +42,10 @@ public final class OverpassWay {
      Returns nodes that related to the way after load from response
     */
     public func loadRelatedNodes() -> [OverpassNode]? {
-        if let response = response, let nodes = response.nodes, let ids = nodeIds {
+        if let nodes = responseElementProvider?.nodes {
             
             var filtered = [OverpassNode]()
-            ids.forEach { id in
+            nodeIds.forEach { id in
                 if let index = nodes.index(where: { $0.id == id }) {
                     filtered.append(nodes[index])
                     return
@@ -62,15 +65,13 @@ public final class OverpassWay {
      Returns another relations that related to the way after load from response
      */
     public func loadRelatedRelations() -> [OverpassRelation]? {
-        if let response = response, let allRels = response.relations {
+        if let allRels = responseElementProvider?.relations {
             var filtered = [OverpassRelation]()
             
             allRels.forEach { relation in
-                if let members = relation.members {
-                    members.forEach { member in
-                        if member.type == .way && member.id == self.id {
-                            filtered.append(relation)
-                        }
+                relation.members.forEach { member in
+                    if member.type == .way && member.id == self.id {
+                        filtered.append(relation)
                     }
                 }
             }
