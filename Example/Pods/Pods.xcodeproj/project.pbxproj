@@ -60,6 +60,7 @@
 		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C1462EBE707EAA30908134144CE88 /* DispatchQueue+Alamofire.swift */; };
 		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2A3D0405E796D91A55E7D0E8996ED0 /* ServerTrustPolicy.swift */; };
 		6489466D2145B54800BA12D7 /* Changeset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6489466C2145B54800BA12D7 /* Changeset.swift */; };
+		6489466F2145B5B800BA12D7 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6489466E2145B5B800BA12D7 /* Tag.swift */; };
 		66CEC7E19AD96B04B9DE0426FC073EED /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2AD8F431980333F1D17452EF81943 /* Permission.swift */; };
 		6851B4E7FD991E0A33F8BD1D83F98DF1 /* RelationQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8418B8F1534603155B36ACC0A662E9E /* RelationQuery.swift */; };
 		6CFD0BFEACABD0272486192E12D30284 /* KeychainHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200EFA51AA158057E31C2ED96BE4D01 /* KeychainHandling.swift */; };
@@ -363,6 +364,7 @@
 		5AAED1C73D3FFE6B2BD2F8F8FF649995 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		63B19BDFD1B0CCA51FACC21AD2534E53 /* Dictionary+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+OAuthSwift.swift"; path = "Sources/Dictionary+OAuthSwift.swift"; sourceTree = "<group>"; };
 		6489466C2145B54800BA12D7 /* Changeset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Changeset.swift; sourceTree = "<group>"; };
+		6489466E2145B5B800BA12D7 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		66045A1E6790C5E8AC1992EA512435EC /* OAuthSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OAuthSwift-prefix.pch"; sourceTree = "<group>"; };
 		66139556DAFD87311252D9A0897B8BE2 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		68345AE0FFF4589CDF36C99076EF0647 /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = Lib/KeychainAccess/Keychain.swift; sourceTree = "<group>"; };
@@ -688,6 +690,7 @@
 			isa = PBXGroup;
 			children = (
 				6489466C2145B54800BA12D7 /* Changeset.swift */,
+				6489466E2145B5B800BA12D7 /* Tag.swift */,
 			);
 			name = Models;
 			path = OSMSwift/Classes/Models;
@@ -1364,6 +1367,7 @@
 				CA06F976DEC278868C1DACE544E69015 /* OSMSwift-dummy.m in Sources */,
 				EDE8715456489E2ED7C2872E3A1EC787 /* Permission+XML.swift in Sources */,
 				66CEC7E19AD96B04B9DE0426FC073EED /* Permission.swift in Sources */,
+				6489466F2145B5B800BA12D7 /* Tag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
