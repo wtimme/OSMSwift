@@ -61,6 +61,7 @@
 		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2A3D0405E796D91A55E7D0E8996ED0 /* ServerTrustPolicy.swift */; };
 		6489466D2145B54800BA12D7 /* Changeset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6489466C2145B54800BA12D7 /* Changeset.swift */; };
 		6489466F2145B5B800BA12D7 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6489466E2145B5B800BA12D7 /* Tag.swift */; };
+		648946712145B88300BA12D7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648946702145B88300BA12D7 /* User.swift */; };
 		66CEC7E19AD96B04B9DE0426FC073EED /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2AD8F431980333F1D17452EF81943 /* Permission.swift */; };
 		6851B4E7FD991E0A33F8BD1D83F98DF1 /* RelationQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8418B8F1534603155B36ACC0A662E9E /* RelationQuery.swift */; };
 		6CFD0BFEACABD0272486192E12D30284 /* KeychainHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200EFA51AA158057E31C2ED96BE4D01 /* KeychainHandling.swift */; };
@@ -365,6 +366,7 @@
 		63B19BDFD1B0CCA51FACC21AD2534E53 /* Dictionary+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+OAuthSwift.swift"; path = "Sources/Dictionary+OAuthSwift.swift"; sourceTree = "<group>"; };
 		6489466C2145B54800BA12D7 /* Changeset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Changeset.swift; sourceTree = "<group>"; };
 		6489466E2145B5B800BA12D7 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		648946702145B88300BA12D7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		66045A1E6790C5E8AC1992EA512435EC /* OAuthSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OAuthSwift-prefix.pch"; sourceTree = "<group>"; };
 		66139556DAFD87311252D9A0897B8BE2 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		68345AE0FFF4589CDF36C99076EF0647 /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = Lib/KeychainAccess/Keychain.swift; sourceTree = "<group>"; };
@@ -691,6 +693,7 @@
 			children = (
 				6489466C2145B54800BA12D7 /* Changeset.swift */,
 				6489466E2145B5B800BA12D7 /* Tag.swift */,
+				648946702145B88300BA12D7 /* User.swift */,
 			);
 			name = Models;
 			path = OSMSwift/Classes/Models;
@@ -1361,6 +1364,7 @@
 				20EF9C03A92C195EA897219E914B3F89 /* HTTPRequestHandling.swift in Sources */,
 				906EAAB1F09B7F9BEDF0B1F7F637CCD3 /* KeychainAccessKeychainHandler.swift in Sources */,
 				6CFD0BFEACABD0272486192E12D30284 /* KeychainHandling.swift in Sources */,
+				648946712145B88300BA12D7 /* User.swift in Sources */,
 				9FAD1F416BDB2EE38B5975AF2D448C2B /* OAuthHandling.swift in Sources */,
 				AF13EDFD1B81E92ADD227455F76B82A7 /* OAuthSwiftOAuthHandler.swift in Sources */,
 				6489466D2145B54800BA12D7 /* Changeset.swift in Sources */,
