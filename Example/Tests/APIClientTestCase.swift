@@ -9,6 +9,8 @@
 import XCTest
 
 import OSMSwift
+import SwiftOverpass
+import Require
 
 class APIClientTestCase: XCTestCase {
 
@@ -221,7 +223,7 @@ class APIClientTestCase: XCTestCase {
         wait(for: [closureExpectation], timeout: 0.5)
     }
     
-    func testAuthenticatedUserShouldShouldParseASuccessfulResponseIntoAUser() {
+    func testAuthenticatedUserShouldParseASuccessfulResponseIntoAUser() {
         // Mock credentials so that we're authenticated.
         keychainHandlerMock.mockedOAuthCredentials = OAuthCredentials(token: "sample-token",
                                                                       secret: "sample-secret")
@@ -244,6 +246,94 @@ class APIClientTestCase: XCTestCase {
             XCTAssertEqual(user.displayName, "john.doe")
             
             XCTAssertNil(error)
+            
+            closureExpectation.fulfill()
+        }
+        wait(for: [closureExpectation], timeout: 0.5)
+    }
+    
+    // MARK: Changesets by user ID
+    
+    func testOpenChangesetsByUserIdShouldQueryTheCorrectURL() {
+        let userId = 42
+        client.openChangesets(userId: userId, { _, _ in })
+        
+        XCTAssertEqual(httpRequestHandlerMock.path, "/api/0.6/changesets?open=true&user=\(userId)")
+    }
+    
+    func testOpenChangesetsByUserIdShouldCallTheClosureIfThereWasAnErrorDuringTheHTTPRequest() {
+        
+        // Act as if the HTTP request handler experienced an error.
+        let mockedError = MockError(code: 1)
+        httpRequestHandlerMock.dataResponse = DataResponse(data: nil, error: mockedError)
+        
+        let closureExpectation = expectation(description: "The closure should be executed.")
+        client.openChangesets(userId: 42) { changesets, error in
+            XCTAssertTrue(changesets.isEmpty)
+            XCTAssertEqual(error as? MockError, mockedError)
+            
+            closureExpectation.fulfill()
+        }
+        
+        wait(for: [closureExpectation], timeout: 0.5)
+    }
+    
+    func testOpenChangesetsByUserIdShouldParseASuccessfulResponse() {
+        // Mock credentials so that we're authenticated.
+        keychainHandlerMock.mockedOAuthCredentials = OAuthCredentials(token: "sample-token",
+                                                                      secret: "sample-secret")
+        
+        guard let xmlData = dataFromXMLFile(named: "MultipleChangesets") else {
+            XCTFail("Failed to read test XML data.")
+            return
+        }
+        
+        httpRequestHandlerMock.dataResponse = DataResponse(data: xmlData, error: nil)
+        
+        let closureExpectation = expectation(description: "The closure should be executed.")
+        client.openChangesets(userId: 42) { changesets, error in
+            XCTAssertNil(error)
+            
+            XCTAssertEqual(changesets.count, 2)
+            
+            // Make sure that the changesets are in the correct order.
+            XCTAssertEqual(changesets.first.require().id, 58900328)
+            XCTAssertEqual(changesets.last.require().id, 58291399)
+            
+            // Check one of the changesets to see whether the XML parsing was successful.
+            let firstChangeset = changesets.first.require()
+            
+            XCTAssertEqual(firstChangeset.userId, 54247)
+            XCTAssertEqual(firstChangeset.username, "dolphinling")
+            
+            XCTAssertEqual(firstChangeset.boundingBox.left, -73.2140236)
+            XCTAssertEqual(firstChangeset.boundingBox.bottom, 44.4734714)
+            XCTAssertEqual(firstChangeset.boundingBox.right, -73.2140236)
+            XCTAssertEqual(firstChangeset.boundingBox.top, 44.4734714)
+            
+            XCTAssertEqual(firstChangeset.tags.count, 4)
+            
+            XCTAssertEqual(firstChangeset.tags.first(where: { $0.key == "source"})?.value,
+                           "local_knowledge;website")
+            XCTAssertEqual(firstChangeset.tags.first(where: { $0.key == "note"})?.value,
+                           "Seems to be inconsistent about spelling their own name, so I put in two, not sure which should be primary")
+            
+            XCTAssertEqual(firstChangeset.createdDateTimestamp,
+                           "2018-05-12T11:39:42Z")
+            XCTAssertEqual(firstChangeset.closedDateTimestamp,
+                           "2018-05-12T11:39:43Z")
+            
+            XCTAssertEqual(firstChangeset.numberOfComments, 2)
+            XCTAssertEqual(firstChangeset.comments.count, 2)
+            
+            // Make sure that the changesets are in the correct order.
+            XCTAssertEqual(firstChangeset.comments.first.require().userId, 1234)
+            XCTAssertEqual(firstChangeset.comments.last.require().userId, 42)
+            
+            // Check one of the comments to see whether the XML parsing was successful.
+            let firstComment = firstChangeset.comments.first.require()
+            XCTAssertEqual(firstComment.username, "jane.doe")
+            XCTAssertEqual(firstComment.content, "Lorem ipsum dolor sed amet.")
             
             closureExpectation.fulfill()
         }

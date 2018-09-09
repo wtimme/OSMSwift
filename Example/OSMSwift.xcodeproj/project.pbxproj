@@ -12,6 +12,7 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		6479DEA32145C13800BBB286 /* MultipleChangesets.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6479DEA22145C13800BBB286 /* MultipleChangesets.xml */; };
 		648946742145BCB800BA12D7 /* AuthenticatedUser.xml in Resources */ = {isa = PBXBuildFile; fileRef = 648946722145BC8D00BA12D7 /* AuthenticatedUser.xml */; };
 		64AB8F3B20E194EA00E6BF4D /* APIClientTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AB8F3A20E194EA00E6BF4D /* APIClientTestCase.swift */; };
 		64AB8F4120E1966400E6BF4D /* OAuthHandlerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AB8F4020E1966400E6BF4D /* OAuthHandlerMock.swift */; };
@@ -48,6 +49,7 @@
 		607FACE51AFB9204008FA782 /* OSMSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSMSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6306F8A844BE92BFC5EC3930 /* Pods_OSMSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OSMSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6479DEA22145C13800BBB286 /* MultipleChangesets.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = MultipleChangesets.xml; path = XML/Changesets/MultipleChangesets.xml; sourceTree = "<group>"; };
 		648946722145BC8D00BA12D7 /* AuthenticatedUser.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = AuthenticatedUser.xml; path = XML/User/AuthenticatedUser.xml; sourceTree = "<group>"; };
 		64AB8F3A20E194EA00E6BF4D /* APIClientTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTestCase.swift; sourceTree = "<group>"; };
 		64AB8F4020E1966400E6BF4D /* OAuthHandlerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OAuthHandlerMock.swift; path = Mocks/OAuthHandlerMock.swift; sourceTree = "<group>"; };
@@ -174,6 +176,14 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		6479DEA12145C11800BBB286 /* Changesets */ = {
+			isa = PBXGroup;
+			children = (
+				6479DEA22145C13800BBB286 /* MultipleChangesets.xml */,
+			);
+			name = Changesets;
+			sourceTree = "<group>";
+		};
 		64AB8F3F20E1964D00E6BF4D /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +198,7 @@
 		64B9F8E920E2E212003A3270 /* XML */ = {
 			isa = PBXGroup;
 			children = (
+				6479DEA12145C11800BBB286 /* Changesets */,
 				64B9F8EA20E2E266003A3270 /* Permissions.xml */,
 				648946722145BC8D00BA12D7 /* AuthenticatedUser.xml */,
 			);
@@ -305,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				648946742145BCB800BA12D7 /* AuthenticatedUser.xml in Resources */,
+				6479DEA32145C13800BBB286 /* MultipleChangesets.xml in Resources */,
 				64B9F8EC20E2E270003A3270 /* Permissions.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

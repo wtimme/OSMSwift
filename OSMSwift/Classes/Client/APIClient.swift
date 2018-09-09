@@ -50,6 +50,13 @@ public protocol APIClientProtocol {
     ///   - boundingBox: The bounding box that confines the map data.
     ///   - completion: Closure that is executed once the map data was downloaded completely or an error occured.
     func mapData(inside boundingBox: BoundingBox, _ completion: @escaping ([OverpassElement], Error?) -> Void)
+    
+    /// Attempts to retrieve all open changesets for the user with the given ID.
+    ///
+    /// - Parameters:
+    ///   - userId: The ID of the user to get all open changesets from.
+    ///   - completion: Closure that is executed once the changesets were retrieved or an error occured.
+    func openChangesets(userId: Int, _ completion: @escaping ([Changeset], Error?) -> Void)
 
 }
 
@@ -170,6 +177,19 @@ public class APIClient: APIClientProtocol {
             }
 
             completion([], nil)
+        }
+    }
+    
+    public func openChangesets(userId: Int, _ completion: @escaping ([Changeset], Error?) -> Void) {
+        let path = "/api/0.6/changesets?open=true&user=\(userId)"
+        
+        httpRequestHandler.request(baseURL, path: path) { (response) in
+            guard let data = response.data, response.error == nil else {
+                completion([], response.error)
+                return
+            }
+            
+            completion(Changeset.changesets(from: data), nil)
         }
     }
 

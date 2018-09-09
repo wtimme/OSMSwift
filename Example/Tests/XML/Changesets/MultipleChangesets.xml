@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="OpenStreetMap server" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+    <changeset id="58900328" user="dolphinling" uid="54247" created_at="2018-05-12T11:39:42Z" closed_at="2018-05-12T11:39:43Z" open="false" min_lat="44.4734714" min_lon="-73.2140236" max_lat="44.4734714" max_lon="-73.2140236" comments_count="2" changes_count="1">
+        <tag k="source" v="local_knowledge;website"/>
+        <tag k="note" v="Seems to be inconsistent about spelling their own name, so I put in two, not sure which should be primary"/>
+        <tag k="created_by" v="JOSM/1.5 (13710 en)"/>
+        <tag k="comment" v="Gastro Grub"/>
+        <discussion>
+            <comment date="2017-04-09T00:52:12Z" uid="1234" user="jane.doe">
+                <text>Lorem ipsum dolor sed amet.</text>
+            </comment>
+            <comment date="2017-07-27T11:10:28Z" uid="42" user="john.doe">
+                <text>Sounds reasonable.</text>
+            </comment>
+        </discussion>
+    </changeset>
+    <changeset id="58291399" user="dolphinling" uid="54247" created_at="2018-04-21T14:19:27Z" closed_at="2018-04-21T14:19:28Z" open="false" min_lat="44.4643946" min_lon="-73.1800710" max_lat="44.4653858" max_lon="-73.1786970" comments_count="0" changes_count="1">
+        <tag k="source" v="local_knowledge"/>
+        <tag k="created_by" v="JOSM/1.5 (13576 en)"/>
+        <tag k="comment" v="This is the Blue Mall, there is no Orange Mall (reverting old new-user test edit)"/>
+    </changeset>
+</osm>
