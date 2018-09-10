@@ -8,10 +8,10 @@
 import Foundation
 
 public struct BoundingBox {
-    let left: Double // The longitude of the left (westernmost) side of the bounding box
-    let bottom: Double // The latitude of the bottom (southernmost) side of the bounding box
-    let right: Double // The longitude of the right (easternmost) side of the bounding box
-    let top: Double // The latitude of the top (northernmost) side of the bounding box
+    public let left: Double // The longitude of the left (westernmost) side of the bounding box
+    public let bottom: Double // The latitude of the bottom (southernmost) side of the bounding box
+    public let right: Double // The longitude of the right (easternmost) side of the bounding box
+    public let top: Double // The latitude of the top (northernmost) side of the bounding box
 
     public init(left: Double, bottom: Double, right: Double, top: Double) {
         self.left = left
