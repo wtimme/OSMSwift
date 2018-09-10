@@ -14,7 +14,7 @@
             </comment>
         </discussion>
     </changeset>
-    <changeset id="58291399" user="dolphinling" uid="54247" created_at="2018-04-21T14:19:27Z" closed_at="2018-04-21T14:19:28Z" open="false" min_lat="44.4643946" min_lon="-73.1800710" max_lat="44.4653858" max_lon="-73.1786970" comments_count="0" changes_count="1">
+    <changeset id="58291399" user="dolphinling" uid="54247" created_at="2018-04-21T14:19:27Z" open="false" min_lat="44.4643946" min_lon="-73.1800710" max_lat="44.4653858" max_lon="-73.1786970" comments_count="0" changes_count="1">
         <tag k="source" v="local_knowledge"/>
         <tag k="created_by" v="JOSM/1.5 (13576 en)"/>
         <tag k="comment" v="This is the Blue Mall, there is no Orange Mall (reverting old new-user test edit)"/>

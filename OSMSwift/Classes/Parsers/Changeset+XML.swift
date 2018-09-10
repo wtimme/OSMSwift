@@ -37,8 +37,7 @@ extension Changeset {
             let boundingBox = Changeset.parseBoundingBox(from: xmlElement),
             let createdDateTimestamp = xmlElement.attributes["created_at"],
             let numberOfCommentsAsString = xmlElement.attributes["comments_count"],
-            let numberOfComments = Int(numberOfCommentsAsString),
-            let closedDateTimestamp = xmlElement.attributes["closed_at"]
+            let numberOfComments = Int(numberOfCommentsAsString)
         else {
             return nil
         }
@@ -51,7 +50,7 @@ extension Changeset {
         self.createdDateTimestamp = createdDateTimestamp
         self.numberOfComments = numberOfComments
         self.comments = Changeset.parseComments(from: xmlElement)
-        self.closedDateTimestamp = closedDateTimestamp
+        self.closedDateTimestamp = xmlElement.attributes["closed_at"]
     }
     
     private static func parseBoundingBox(from changesetXMLElement: AEXMLElement) -> BoundingBox? {
