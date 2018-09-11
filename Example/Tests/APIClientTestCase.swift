@@ -339,6 +339,82 @@ class APIClientTestCase: XCTestCase {
         }
         wait(for: [closureExpectation], timeout: 0.5)
     }
+    
+    // MARK: Create Changeset
+    
+    func testCreateChangesetShouldQueryTheCorrectURL() {
+        let tags = [Tag(key: "man_made", value: "surveillance"),
+                    Tag(key: "camera:mount", value: "pole")]
+        
+        client.createChangeset(tags: tags, { _, _ in })
+        
+        XCTAssertEqual(httpRequestHandlerMock.path, "/api/0.6/changeset/create")
+    }
+    
+    func testCreateChangesetShouldUseHTTPMethodPut() {
+        let tags = [Tag(key: "man_made", value: "surveillance"),
+                    Tag(key: "camera:mount", value: "pole")]
+        
+        client.createChangeset(tags: tags, { _, _ in })
+        
+        XCTAssertEqual(httpRequestHandlerMock.method, "PUT")
+    }
+    
+    func testCreateChangesetShouldPutTheXMLOfTheChangelogWrappedInOSMTags() {
+        let tags = [Tag(key: "created_by", value: "OpenCCTV"),
+                    Tag(key: "comment", value: "Lorem ipsum dolor sed amet.")]
+        
+        client.createChangeset(tags: tags, { _, _ in })
+        
+        // Load the XML string that we expect.
+        let expectedXMLData = dataFromXMLFile(named: "ChangesetToCreate").require()
+        let expectedXMLString = String(data: expectedXMLData, encoding: .utf8).require()
+        
+        // Trim the string, to avoid accidentally inserted whitespace or line breaks.
+        let trimmedExpectedXMLString = expectedXMLString.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        // Convert the data that was sent to a string for comparison.
+        let dataThatWasSent = httpRequestHandlerMock.data.require(hint: "The client should have sent data.")
+        let stringThatWasSent = String(data: dataThatWasSent, encoding: .utf8).require()
+        
+        XCTAssertEqual(stringThatWasSent, trimmedExpectedXMLString)
+    }
+    
+    func testCreateChangesetForwardErrorsToTheCompletionClosure() {
+        let tags = [Tag(key: "man_made", value: "surveillance"),
+                    Tag(key: "camera:mount", value: "pole")]
+        
+        let mockedError = MockError(code: 42)
+        httpRequestHandlerMock.dataResponse = DataResponse(data: nil, error: mockedError)
+        
+        let completionExpectation = expectation(description: "The `completion` closure should be executed.")
+        client.createChangeset(tags: tags) { (changesetId, error) in
+            XCTAssertNil(changesetId)
+            XCTAssertEqual(error as? MockError, mockedError)
+            
+            completionExpectation.fulfill()
+        }
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+    
+    func testCreateChangesetShouldParseTheChangeseIdFromTheResponse() {
+        let tags = [Tag(key: "man_made", value: "surveillance"),
+                    Tag(key: "camera:mount", value: "pole")]
+        
+        let mockedChangesetId = 42
+        let mockedResponseString = "\(mockedChangesetId)"
+        let mockedResponseData = mockedResponseString.data(using: .utf8)
+        httpRequestHandlerMock.dataResponse = DataResponse(data: mockedResponseData, error: nil)
+        
+        let completionExpectation = expectation(description: "The `completion` closure should be executed.")
+        client.createChangeset(tags: tags) { (changesetId, error) in
+            XCTAssertNil(error)
+            XCTAssertEqual(changesetId, mockedChangesetId)
+            
+            completionExpectation.fulfill()
+        }
+        waitForExpectations(timeout: 1, handler: nil)
+    }
 
     // MARK: Helper
 

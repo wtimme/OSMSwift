@@ -57,6 +57,13 @@ public protocol APIClientProtocol {
     ///   - userId: The ID of the user to get all open changesets from.
     ///   - completion: Closure that is executed once the changesets were retrieved or an error occured.
     func openChangesets(userId: Int, _ completion: @escaping ([Changeset], Error?) -> Void)
+    
+    /// Attempts to create the given changeset.
+    ///
+    /// - Parameters:
+    ///   - tags: The tags to assign to the changeset.
+    ///   - completion: Closure that is executed once the changeset was created and assigned an ID or an error occurred.
+    func createChangeset(tags: [Tag], _ completion: @escaping (_ changesetId: Int?, _ error: Error?) -> Void)
 
 }
 
@@ -191,6 +198,50 @@ public class APIClient: APIClientProtocol {
             
             completion(Changeset.changesets(from: data), nil)
         }
+    }
+    
+    public func createChangeset(tags: [Tag], _ completion: @escaping (Int?, Error?) -> Void) {
+        let path = "/api/0.6/changeset/create"
+        
+        let xmlString = xmlStringForCreatingAChangeset(with: tags)
+        guard let data = xmlString.data(using: .utf8) else {
+            assertionFailure("Failed to create data for creating the changeset")
+            return
+        }
+        
+        httpRequestHandler.request(baseURL, path: path, method: "PUT", data: data) { (response) in
+            guard nil == response.error else {
+                completion(nil, response.error)
+                return
+            }
+            
+            // When a changeset was successfully created, the server responds with the ID of the changeset.
+            // Attempt to parse it.
+            guard
+                let responseData = response.data,
+                let responseAsString = String(data: responseData, encoding: .utf8),
+                let changesetId = Int(responseAsString)
+            else {
+                completion(nil, nil)
+                return
+            }
+            
+            completion(changesetId, nil)
+        }
+    }
+    
+    // MARK: Private methods
+    
+    func xmlStringForCreatingAChangeset(with tags: [Tag]) -> String {
+        var xmlString = "<osm><changeset>"
+        
+        tags.forEach {
+            xmlString += "<tag k=\"\($0.key)\" v=\"\($0.value)\"/>"
+        }
+        
+        xmlString += "</changeset></osm>"
+        
+        return xmlString
     }
 
 }
