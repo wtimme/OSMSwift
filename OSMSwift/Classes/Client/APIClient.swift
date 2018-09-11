@@ -104,6 +104,19 @@ public class APIClient: APIClientProtocol {
             oauthHandler.setupClientCredentials(credentials)
         }
     }
+    
+    public convenience init(baseURL: URL, oauthConsumerKey: String, oauthConsumerSecret: String) {
+        let keychainHandler = KeychainAccessKeychainHandler(apiBaseURL: baseURL)
+        let oauthHandler = OAuthSwiftOAuthHandler(baseURL: baseURL,
+                                                  consumerKey: oauthConsumerKey,
+                                                  consumerSecret: oauthConsumerSecret)
+        let httpRequestHandler = AlamofireHTTPRequestHandler()
+        
+        self.init(baseURL: baseURL,
+                  keychainHandler: keychainHandler,
+                  oauthHandler: oauthHandler,
+                  httpRequestHandler: httpRequestHandler)
+    }
 
     // MARK: APIClientProtocol
 
