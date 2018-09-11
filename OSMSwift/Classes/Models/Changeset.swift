@@ -26,7 +26,7 @@ public struct Changeset {
     public let id: Int
     public let userId: Int
     public let username: String
-    public let boundingBox: BoundingBox
+    public let boundingBox: BoundingBox?
     public let tags: [Tag]
     public let createdDateTimestamp: String
     public let numberOfComments: Int
@@ -36,7 +36,7 @@ public struct Changeset {
     public init(id: Int,
                 userId: Int,
                 username: String,
-                boundingBox: BoundingBox,
+                boundingBox: BoundingBox?,
                 tags: [Tag],
                 createdDateTimestamp: String,
                 numberOfComments: Int,

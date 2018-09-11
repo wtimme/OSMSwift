@@ -34,7 +34,6 @@ extension Changeset {
             let userIdAsString = xmlElement.attributes["uid"],
             let userId = Int(userIdAsString),
             let username = xmlElement.attributes["user"],
-            let boundingBox = Changeset.parseBoundingBox(from: xmlElement),
             let createdDateTimestamp = xmlElement.attributes["created_at"],
             let numberOfCommentsAsString = xmlElement.attributes["comments_count"],
             let numberOfComments = Int(numberOfCommentsAsString)
@@ -45,7 +44,7 @@ extension Changeset {
         self.id = id
         self.userId = userId
         self.username = username
-        self.boundingBox = boundingBox
+        self.boundingBox = Changeset.parseBoundingBox(from: xmlElement)
         self.tags = Changeset.parseTags(from: xmlElement)
         self.createdDateTimestamp = createdDateTimestamp
         self.numberOfComments = numberOfComments

@@ -306,10 +306,11 @@ class APIClientTestCase: XCTestCase {
             XCTAssertEqual(firstChangeset.userId, 54247)
             XCTAssertEqual(firstChangeset.username, "dolphinling")
             
-            XCTAssertEqual(firstChangeset.boundingBox.left, -73.2140236)
-            XCTAssertEqual(firstChangeset.boundingBox.bottom, 44.4734714)
-            XCTAssertEqual(firstChangeset.boundingBox.right, -73.2140236)
-            XCTAssertEqual(firstChangeset.boundingBox.top, 44.4734714)
+            let boundingBox = firstChangeset.boundingBox.require()
+            XCTAssertEqual(boundingBox.left, -73.2140236)
+            XCTAssertEqual(boundingBox.bottom, 44.4734714)
+            XCTAssertEqual(boundingBox.right, -73.2140236)
+            XCTAssertEqual(boundingBox.top, 44.4734714)
             
             XCTAssertEqual(firstChangeset.tags.count, 4)
             
