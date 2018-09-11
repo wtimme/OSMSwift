@@ -416,13 +416,4 @@ class APIClientTestCase: XCTestCase {
         waitForExpectations(timeout: 1, handler: nil)
     }
 
-    // MARK: Helper
-
-    private func dataFromXMLFile(named fileName: String) -> Data? {
-        let bundle = Bundle(for: type(of: self))
-        guard let url = bundle.url(forResource: fileName, withExtension: "xml") else { return nil }
-
-        return try? Data(contentsOf: url)
-    }
-
 }
