@@ -55,6 +55,7 @@
 		60401BE1466432D67BEC5FC667372016 /* OAuthSwiftMultipartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7208E7B6B6E40CE7378182535FD68F /* OAuthSwiftMultipartData.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B064D2696BF684C60BB2C5765F188FE /* DispatchQueue+Alamofire.swift */; };
 		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59EB972552EFDD61DB5F490F8F6C97D /* ServerTrustPolicy.swift */; };
+		64788EEB21487ACB003DFB83 /* APIClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64788EEA21487ACB003DFB83 /* APIClientProtocol.swift */; };
 		6BA8134B84F6CDDF31015BFCD0DD9A49 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56946E9DE4D956BC3F7791DBC01A2454 /* User.swift */; };
 		6BC26DAF573668D24A525EE783ECC94A /* WayReferable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3689D04830A0B519A0EDA43B15688C /* WayReferable.swift */; };
 		6CCD8303D5CE0C0D01280D2FD61FFEDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F0A3082A1792EA451C056051169C74 /* Foundation.framework */; };
@@ -402,6 +403,7 @@
 		5F6EF0DC47072140812B3D7F0A5E0139 /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60ADBEC4F1FD9B4F9DEA3B1E023AEA1D /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
 		60EACEB64F9F035D4A2C2F1B38AA0026 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		64788EEA21487ACB003DFB83 /* APIClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientProtocol.swift; sourceTree = "<group>"; };
 		6518A90C1B7D424FCC09DB7CBDBE710C /* AEXML.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AEXML.xcconfig; sourceTree = "<group>"; };
 		693DDF229ED15441590F3DA94E8595FE /* SwiftOverpass.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftOverpass.modulemap; sourceTree = "<group>"; };
 		69B0FC39C0A01EE3059B56BD19787ADA /* KeychainAccess-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainAccess-umbrella.h"; sourceTree = "<group>"; };
@@ -707,6 +709,7 @@
 		39D12CC0000F77FAA4CF07311512C3E1 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				64788EEA21487ACB003DFB83 /* APIClientProtocol.swift */,
 				D9CA261E1926DB4DCFF6A7D628018A8E /* APIClient.swift */,
 				091F327529F3FC568D02DF30E9C3F19E /* BoundingBox.swift */,
 				8558E08BB5D29D4CA3ACA6EA94A48EAB /* Permission.swift */,
@@ -1488,6 +1491,7 @@
 				A1A997F084B1CD0798A2E0590B1A424E /* OSMSwift-dummy.m in Sources */,
 				0AB1F8A912789622FE7486A64925D294 /* Permission+XML.swift in Sources */,
 				C0CDD9288013608657ED9E5133B60855 /* Permission.swift in Sources */,
+				64788EEB21487ACB003DFB83 /* APIClientProtocol.swift in Sources */,
 				3AB609A42A71F889EDE3F4CA607B44F2 /* Tag.swift in Sources */,
 				A017D2BB28C129A778CDFE10A3DAAB48 /* User+XML.swift in Sources */,
 				6BA8134B84F6CDDF31015BFCD0DD9A49 /* User.swift in Sources */,
