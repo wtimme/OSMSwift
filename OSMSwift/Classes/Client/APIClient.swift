@@ -17,6 +17,11 @@ enum Endpoint: String {
     case getPermissions = "/api/0.6/permissions"
 }
 
+public enum Result<Value> {
+    case success(Value)
+    case error(Error?)
+}
+
 public protocol APIClientProtocol {
 
     /// Flag whether the client is authenticated.
@@ -64,6 +69,16 @@ public protocol APIClientProtocol {
     ///   - tags: The tags to assign to the changeset.
     ///   - completion: Closure that is executed once the changeset was created and assigned an ID or an error occurred.
     func createChangeset(tags: [Tag], _ completion: @escaping (_ changesetId: Int?, _ error: Error?) -> Void)
+    
+    /// Attempts to create a new Node in the Changeset with the given ID.
+    ///
+    /// - Parameters:
+    ///   - node: The node to create.
+    ///   - changesetId: The changeset the Node creation belongs to.
+    ///   - completion: Closure that is executed once the Node was created and assigned an ID or an error occurred.
+    func createNode(_ node: OverpassNode,
+                    changesetId: Int,
+                    _ completion: @escaping (Result<Int>) -> Void)
 
 }
 
@@ -243,6 +258,37 @@ public class APIClient: APIClientProtocol {
         }
     }
     
+    public func createNode(_ node: OverpassNode,
+                           changesetId: Int,
+                           _ completion: @escaping (Result<Int>) -> Void) {
+        let path = "/api/0.6/node/create"
+        
+        let xmlString = xmlStringForAddingNode(node, changesetId: changesetId)
+        guard let data = xmlString.data(using: .utf8) else {
+            assertionFailure("Failed to create data for creating the changeset")
+            return
+        }
+        
+        httpRequestHandler.request(baseURL, path: path, method: "PUT", data: data) { (response) in
+            guard nil == response.error else {
+                completion(.error(response.error))
+                return
+            }
+            
+            // When an entity was successfully created, the server responds with the ID the entity was assigned.
+            guard
+                let responseData = response.data,
+                let responseString = String(data: responseData, encoding: .utf8),
+                let responseAsInteger = Int(responseString)
+            else {
+                completion(.error(nil))
+                return
+            }
+            
+            completion(Result.success(responseAsInteger))
+        }
+    }
+    
     // MARK: Private methods
     
     func xmlStringForCreatingAChangeset(with tags: [Tag]) -> String {
@@ -253,6 +299,18 @@ public class APIClient: APIClientProtocol {
         }
         
         xmlString += "</changeset></osm>"
+        
+        return xmlString
+    }
+    
+    func xmlStringForAddingNode(_ node: OverpassNode, changesetId: Int) -> String {
+        var xmlString = "<osm><node changeset=\"\(changesetId)\" lat=\"\(node.latitude)\" lon=\"\(node.longitude)\">"
+        
+        node.tags.forEach {
+            xmlString += "<tag k=\"\($0.key)\" v=\"\($0.value)\"/>"
+        }
+        
+        xmlString += "</node></osm>"
         
         return xmlString
     }

@@ -416,5 +416,125 @@ class APIClientTestCase: XCTestCase {
         }
         waitForExpectations(timeout: 1, handler: nil)
     }
+    
+    // MARK: Create Node
+    
+    func testCreateNodeShouldQueryTheCorrectURL() {
+        client.createNode(makeOverpassNode(), changesetId: 1, { _ in })
+        
+        XCTAssertEqual(httpRequestHandlerMock.path, "/api/0.6/node/create")
+    }
+    
+    func testCreateNodeShouldUseHTTPMethodPut() {
+        client.createNode(makeOverpassNode(), changesetId: 1, { _ in })
+        
+        XCTAssertEqual(httpRequestHandlerMock.method, "PUT")
+    }
+    
+    func testCreateNodeShouldCompleteWithAnErrorWhenTheHTTPRequestEncounteredAnError() {
+        let node = makeOverpassNode()
+        
+        let mockedError = MockError(code: 42)
+        httpRequestHandlerMock.dataResponse = DataResponse(data: nil, error: mockedError)
+        
+        let completionExpectation = expectation(description: "The `completion` closure should be executed.")
+        client.createNode(node, changesetId: 1) { result in
+            if case let Result.error(error) = result {
+                XCTAssertEqual(error as? MockError, mockedError)
+            }
+            
+            completionExpectation.fulfill()
+        }
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+    
+    func testCreateNodeShouldCompleteWithAnErrorWhenTheResponseTextCanNotBeParsedToAnInteger() {
+        let node = makeOverpassNode()
+        
+        let mockedResponseAsString = "Lorem ipsum"
+        httpRequestHandlerMock.dataResponse = DataResponse(data: mockedResponseAsString.data(using: .utf8),
+                                                           error: nil)
+        
+        let completionExpectation = expectation(description: "The `completion` closure should be executed.")
+        client.createNode(node, changesetId: 1) { result in
+            if case let Result.error(error) = result {
+                XCTAssertNil(error)
+            } else {
+                XCTFail("Not being able to parse the response for an Integer should result in an error result.")
+            }
+            
+            completionExpectation.fulfill()
+        }
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+    
+    func testCreateNodeShouldCompleteWithTheNodeIdWhenTheResponseTextCanBeParsedToAnInteger() {
+        let node = makeOverpassNode(nodeId: 0)
+        
+        let mockedNodeId = 42
+        let mockedResponseAsString = "\(mockedNodeId)"
+        httpRequestHandlerMock.dataResponse = DataResponse(data: mockedResponseAsString.data(using: .utf8),
+                                                           error: nil)
+        
+        let completionExpectation = expectation(description: "The `completion` closure should be executed.")
+        client.createNode(node, changesetId: 1) { result in
+            if case let Result.success(nodeId) = result {
+                XCTAssertEqual(nodeId, mockedNodeId)
+            } else {
+                XCTFail("The client should have parsed the Node ID from the response properly.")
+            }
+            
+            completionExpectation.fulfill()
+        }
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+    
+    func testCreateNodeShouldPutTheXMLOfTheNodeWithTheChangesetIdWrappedInOSMTags() {
+        let changesetId = 12
+        let node = makeOverpassNode(nodeId: 81,
+                                    latitude: 44.4643,
+                                    longitude: -73.1801,
+                                    tags: ["man_made": "surveillance"],
+                                    version: 3,
+                                    changesetId: changesetId)
+        
+        client.createNode(node, changesetId: changesetId, { _ in })
+        
+        // Load the XML string that we expect.
+        let expectedXMLData = dataFromXMLFile(named: "NodeToCreate").require()
+        let expectedXMLString = String(data: expectedXMLData, encoding: .utf8).require()
+        
+        // Trim the string, to avoid accidentally inserted whitespace or line breaks.
+        let trimmedExpectedXMLString = expectedXMLString.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        // Convert the data that was sent to a string for comparison.
+        let dataThatWasSent = httpRequestHandlerMock.data.require(hint: "The client should have sent data.")
+        let stringThatWasSent = String(data: dataThatWasSent, encoding: .utf8).require()
+        
+        XCTAssertEqual(stringThatWasSent, trimmedExpectedXMLString)
+    }
+    
+    // MARK: Test Helpers
+    
+    private func makeOverpassNode(nodeId: Int = 1,
+                                  latitude: Double = 53.5394400,
+                                  longitude: Double = 10.0007200,
+                                  tags: [String: String] = [:],
+                                  version: Int = 0,
+                                  changesetId: Int = 0) -> OverpassNode {
+        
+        let meta = OverpassElement.Meta(version: version,
+                                        changesetId: changesetId,
+                                        timestamp: "",
+                                        userId: 0,
+                                        username: "")
+        
+        return OverpassNode(id: nodeId,
+                            tags: tags,
+                            meta: meta,
+                            lat:  latitude,
+                            lon: longitude,
+                            responseElementProvider: nil)
+    }
 
 }
